@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqplnir6nk1py"]
+
+[ext_resource type="Script" uid="uid://cu0eu175x627n" path="res://scenes/dataFields/int_data_field.gd" id="1_tvq0m"]
+
+[node name="IntDataField" type="VBoxContainer" node_paths=PackedStringArray("__value_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_tvq0m")
+__value_node = NodePath("Value")
+
+[node name="Value" type="SpinBox" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+alignment = 1

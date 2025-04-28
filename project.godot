@@ -1,0 +1,24 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Arbritrary JSON flow editor"
+run/main_scene="uid://bi4efwsssx38i"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+JSONFlowSettings="*res://scenes/json_flow_settings.gd"
+
+[dotnet]
+
+project/assembly_name="Arbritrary JSON flow editor"

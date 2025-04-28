@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm1r32yiyga5s"]
+
+[ext_resource type="Script" uid="uid://ctww1awfxvj6b" path="res://scenes/dataFields/text_data_field.gd" id="1_nrnpe"]
+
+[node name="TextDataField" type="VBoxContainer" node_paths=PackedStringArray("__value_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_nrnpe")
+__value_node = NodePath("Value")
+
+[node name="Value" type="TextEdit" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "data"
+wrap_mode = 1
+scroll_fit_content_height = true

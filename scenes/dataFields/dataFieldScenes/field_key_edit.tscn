@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://whnbqgtmqosf"]
+
+[node name="Key" type="TextEdit"]
+mouse_filter = 1
+placeholder_text = "key"
+context_menu_enabled = false
+scroll_fit_content_height = true

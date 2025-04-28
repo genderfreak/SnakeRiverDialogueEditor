@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi4efwsssx38i"]
+
+[ext_resource type="Script" uid="uid://bhd47nkn5rmqy" path="res://scenes/menu_bar.gd" id="1_1v1ex"]
+[ext_resource type="PackedScene" uid="uid://dl371oygb1ob3" path="res://scenes/right_click_menu.tscn" id="1_rxfvf"]
+[ext_resource type="Script" uid="uid://8gi8dkj8erw3" path="res://scenes/graph_edit.gd" id="1_v4xje"]
+[ext_resource type="Script" uid="uid://c1hkif44o1rng" path="res://scenes/add_node_menu.gd" id="2_rxfvf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuBar" type="MenuBar" parent="VBoxContainer" node_paths=PackedStringArray("graph_edit")]
+layout_mode = 2
+script = ExtResource("1_1v1ex")
+graph_edit = NodePath("../GraphEdit")
+
+[node name="GraphEdit" type="GraphEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+snapping_enabled = false
+right_disconnects = true
+script = ExtResource("1_v4xje")
+
+[node name="RightClickComponent" parent="VBoxContainer/GraphEdit" node_paths=PackedStringArray("popup") instance=ExtResource("1_rxfvf")]
+popup = NodePath("../AddNodeMenu")
+
+[node name="AddNodeMenu" type="PopupMenu" parent="VBoxContainer/GraphEdit"]
+script = ExtResource("2_rxfvf")

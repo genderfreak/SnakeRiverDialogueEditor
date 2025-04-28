@@ -1,0 +1,86 @@
+extends GraphNode
+
+class_name JSONFlowNode
+@export var add_field_button: Node
+@export var output_editor: Node
+
+var output_label_scn: PackedScene = preload("res://scenes/output_label.tscn")
+
+var output_labels: Array = []
+var outputs: Array = []
+
+var fields: Array = []
+
+func _ready():
+	change_name(name)
+	add_field_button.add_field.connect(add_field)
+	output_editor.output_change_request.connect(_output_change_request)
+	add_output()
+
+## Add a field to the fields list
+func add_field(field_type: String):
+	var field = JSONFlowSettings.data_fields[field_type].instantiate()
+	field.field_type = field_type
+	%Properties.add_child(field)
+	fields.append(field)
+	field.remove_field.connect(remove_field)
+
+## Remove a field
+func remove_field(field: NullDataField):
+	fields.erase(field)
+	field.queue_free()
+
+## Set output slot to to_node (not typed but should be a json node or null)
+func set_output(from_port: int, to_node):
+	outputs[from_port] = to_node
+
+func _output_change_request(add: bool):
+	if add: add_output()
+	else: remove_output()
+
+## Add an output slot
+func add_output():
+	var new_label = output_label_scn.instantiate()
+	new_label.text=str(len(output_labels))
+	add_child(new_label)
+	move_child(new_label, len(output_labels))
+	set_slot_enabled_right(len(output_labels),true)
+	output_labels.append(new_label)
+	outputs.append(null)
+
+## Remove an output slot
+func remove_output():
+	outputs.pop_back()
+	remove_child(output_labels.pop_back())
+	set_slot_enabled_right(len(output_labels),false)
+
+## Change node's name. Update title text to match.
+func change_name(new_name):
+	name = new_name
+	title = name
+
+## Return a dictionary of elements to save to a file
+func save() -> Dictionary:
+	var dict = {}
+	dict.merge({"graph_data": get_graph_data()})
+	## If outputs isn't empty, add an array of outputs with names to dict
+	if not outputs.is_empty():
+		var output_names = []
+		for i in outputs:
+			if i:
+				output_names.append(i.name)
+		dict.merge({"outputs": output_names})
+	if not fields.is_empty():
+		var fields_dict = {}
+		var fields_meta_dict = {}
+		for f in fields:
+			fields_dict.set(f.key,f.value)
+			fields_meta_dict.set(f.key,f.field_type)
+		dict.merge({"fields": fields_dict})
+		dict.merge({"fields_meta": fields_meta_dict})
+	return dict
+
+## Returns data used to recreate the node graph
+func get_graph_data() -> Dictionary:
+	return { "size": {"x":size.x,"y":size.y},
+	"position_offset": {"x": position_offset.x, "y": position_offset.y},}

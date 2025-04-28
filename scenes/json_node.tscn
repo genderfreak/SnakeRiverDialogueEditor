@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://cop8fr5w0sdwi"]
+
+[ext_resource type="Script" uid="uid://dflonhgcoyxvv" path="res://scenes/json_node.gd" id="1_36a0p"]
+[ext_resource type="Texture2D" uid="uid://do8gwhhwilcj6" path="res://icons/Add.svg" id="2_4r1s2"]
+[ext_resource type="PackedScene" uid="uid://b1beso5f3pkx6" path="res://scenes/outputs_editor.tscn" id="2_qjxa0"]
+[ext_resource type="Script" uid="uid://dr4ppdbgqfgll" path="res://scenes/add_field_button.gd" id="4_pmavr"]
+[ext_resource type="PackedScene" uid="uid://dl371oygb1ob3" path="res://scenes/right_click_menu.tscn" id="9_640a0"]
+[ext_resource type="Script" uid="uid://btjmb0dk22tt3" path="res://scenes/node_popup_menu.gd" id="10_fhbf1"]
+
+[node name="GraphNode" type="GraphNode" node_paths=PackedStringArray("add_field_button", "output_editor")]
+offset_right = 240.0
+offset_bottom = 148.0
+mouse_filter = 1
+title = "JSON Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_36a0p")
+add_field_button = NodePath("Panel/Properties/Fields/AddFieldButton")
+output_editor = NodePath("Panel/Properties/OutputsEditor")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="Properties" type="VBoxContainer" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="OutputsEditor" parent="Panel/Properties" instance=ExtResource("2_qjxa0")]
+layout_mode = 2
+
+[node name="Fields" type="HBoxContainer" parent="Panel/Properties"]
+layout_mode = 2
+
+[node name="FieldsLabel" type="Label" parent="Panel/Properties/Fields"]
+layout_mode = 2
+text = "Fields"
+
+[node name="AddFieldButton" type="MenuButton" parent="Panel/Properties/Fields"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Add"
+icon = ExtResource("2_4r1s2")
+flat = false
+alignment = 0
+script = ExtResource("4_pmavr")
+
+[node name="RightClickComponent" parent="." node_paths=PackedStringArray("popup") instance=ExtResource("9_640a0")]
+popup = NodePath("../PopupMenu")
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+script = ExtResource("10_fhbf1")
