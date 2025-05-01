@@ -1,0 +1,64 @@
+{
+  "GraphNode": {
+    "fields": {
+      "somekey": ""
+    },
+    "fields_meta": {
+      "somekey": "Text Data Field"
+    },
+    "graph_data": {
+      "position_offset": {
+        "x": 130.0,
+        "y": 41.0
+      },
+      "size": {
+        "x": 240.0,
+        "y": 279.0
+      }
+    },
+    "outputs": [
+      "_GraphNode_79",
+      "_GraphNode_323",
+      "_GraphNode_305"
+    ]
+  },
+  "_GraphNode_305": {
+    "graph_data": {
+      "position_offset": {
+        "x": 479.0,
+        "y": 267.0
+      },
+      "size": {
+        "x": 240.0,
+        "y": 148.0
+      }
+    },
+    "outputs": []
+  },
+  "_GraphNode_323": {
+    "graph_data": {
+      "position_offset": {
+        "x": 742.389038085938,
+        "y": 141.575958251953
+      },
+      "size": {
+        "x": 240.0,
+        "y": 148.0
+      }
+    },
+    "outputs": []
+  },
+  "_GraphNode_79": {
+    "graph_data": {
+      "position_offset": {
+        "x": 480.0,
+        "y": 9.0
+      },
+      "size": {
+        "x": 240.0,
+        "y": 148.0
+      }
+    },
+    "outputs": []
+  }
+}
