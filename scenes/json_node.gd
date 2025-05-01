@@ -80,20 +80,24 @@ func save() -> Dictionary:
 		dict.merge({"fields_meta": fields_meta_dict})
 	return dict
 
-## Load properties from a dictionary of elements
-func load_from(dict: Dictionary):
+func __await_ready_then_do(node, callable):
+	await node.ready
+	callable.call()
+
+## Load properties from a dictionary of elements, return outputs to be connected or empty dict if none to connect
+func load_from(dict: Dictionary) -> Array:
 	size.x = dict["graph_data"]["size"]["x"]
 	size.y = dict["graph_data"]["size"]["y"]
 	position_offset.x = dict["graph_data"]["position_offset"]["x"]
 	position_offset.y = dict["graph_data"]["position_offset"]["y"]
-	if dict["fields"]:
+	if dict.has("fields"):
 		for f in dict["fields"]:
 			var field = JSONFlowSettings.data_fields[dict["fields_meta"][f]].instantiate()
 			if dict["fields"][f]:
 				field.set_value(dict["fields"][f])
+			__await_ready_then_do(field, field.set_key.bind(f))
 			add_child(field)
-			print(field)
-			field.set_key(f)
+	return dict["outputs"] if dict.has("outputs") else {}
 
 ## Returns data used to recreate the node graph
 func get_graph_data() -> Dictionary:

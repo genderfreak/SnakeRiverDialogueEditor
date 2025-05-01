@@ -15,6 +15,11 @@ var field_type
 signal remove_field(field)
 
 func _ready():
+	# Key node
+	__key_node = __key_node_scene.instantiate()
+	add_child(__key_node)
+	move_child(__key_node,0)
+	__key_node.text_changed.connect(func(): key=__key_node.text)
 	# Right click stuff
 	field_popup = __field_popup_scene.instantiate()
 	right_click_menu = __right_click_menu_scene.instantiate()
@@ -22,11 +27,6 @@ func _ready():
 	right_click_menu.popup = field_popup
 	add_child(right_click_menu)
 	field_popup.remove_field.connect(delete_self)
-	# Key node
-	__key_node = __key_node_scene.instantiate()
-	add_child(__key_node)
-	move_child(__key_node,0)
-	__key_node.text_changed.connect(func(): key=__key_node.text)
 
 ## Return a key: value pair
 func save() -> Dictionary:
