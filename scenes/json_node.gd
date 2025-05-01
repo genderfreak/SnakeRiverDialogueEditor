@@ -80,6 +80,21 @@ func save() -> Dictionary:
 		dict.merge({"fields_meta": fields_meta_dict})
 	return dict
 
+## Load properties from a dictionary of elements
+func load_from(dict: Dictionary):
+	size.x = dict["graph_data"]["size"]["x"]
+	size.y = dict["graph_data"]["size"]["y"]
+	position_offset.x = dict["graph_data"]["position_offset"]["x"]
+	position_offset.y = dict["graph_data"]["position_offset"]["y"]
+	if dict["fields"]:
+		for f in dict["fields"]:
+			var field = JSONFlowSettings.data_fields[dict["fields_meta"][f]].instantiate()
+			if dict["fields"][f]:
+				field.set_value(dict["fields"][f])
+			add_child(field)
+			print(field)
+			field.set_key(f)
+
 ## Returns data used to recreate the node graph
 func get_graph_data() -> Dictionary:
 	return { "size": {"x":size.x,"y":size.y},

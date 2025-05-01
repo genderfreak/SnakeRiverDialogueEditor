@@ -39,4 +39,21 @@ func save_to_file(path: String):
 	file.close()
 
 func load_from_file(path: String):
-	pass
+	for i in get_children():
+		if i is GraphNode:
+			i.queue_free()
+	var file = FileAccess.open(path,FileAccess.READ)
+	var json = JSON.new()
+	var err = json.parse(file.get_as_text())
+	if err==OK:
+		if json.data is Dictionary:
+			pass
+		else:
+			push_warning("JSON failure, laugh at this user! (unexpected data type %s)" % type_string(typeof(json.data)))
+	else:
+		push_warning("JSON Parse Error: " + json.get_error_message(), " at line ", json.get_error_line())
+	for name in json.data:
+		var new_node = JSONFlowSettings.flow_node.instantiate()
+		new_node.name=name
+		new_node.load_from(json.data[name])
+		add_child(new_node)

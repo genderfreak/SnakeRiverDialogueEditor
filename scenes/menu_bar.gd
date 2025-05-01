@@ -6,7 +6,7 @@ var options = {
 	"File": [
 		["Save", _save_popup],
 		["Save as", _save_as_popup],
-		["Load", _save_as_popup]
+		["Load", _load_popup]
 	],
 	"Edit": [
 	]
