@@ -6,13 +6,13 @@ func _ready():
 	connection_request.connect(_on_connection_request)
 	disconnection_request.connect(_on_disconnection_request)
 
-func add_node(data: Dictionary = {}, name: String = ""):
+func add_node(data: Dictionary = {}, node_name: String = ""):
 	var instance = json_flow_node.instantiate()
 	add_child(instance)
 	if data:
 		instance.load_from(data)
-	if name:
-		instance.change_name(name)
+	if node_name:
+		instance.change_name(node_name)
 	instance.position_offset = (get_local_mouse_position() + scroll_offset) / zoom
 
 func get_nodes_connected_to(from_node: StringName, from_port: int):
