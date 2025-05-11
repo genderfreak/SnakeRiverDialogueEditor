@@ -1,6 +1,7 @@
 extends GraphNode
 
 class_name JSONFlowNode
+
 @export var add_field_button: Node
 @export var output_editor: Node
 
@@ -17,13 +18,14 @@ func _ready():
 	output_editor.output_change_request.connect(_output_change_request)
 	add_output()
 
-## Add a field to the fields list
+## Add a field to the fields list, return the field
 func add_field(field_type: String):
 	var field = JSONFlowSettings.data_fields[field_type].instantiate()
 	field.field_type = field_type
 	%Properties.add_child(field)
 	fields.append(field)
 	field.remove_field.connect(remove_field)
+	return field
 
 ## Remove a field
 func remove_field(field: NullDataField):
@@ -92,14 +94,18 @@ func load_from(dict: Dictionary) -> Array:
 	position_offset.y = dict["graph_data"]["position_offset"]["y"]
 	if dict.has("fields"):
 		for f in dict["fields"]:
-			var field = JSONFlowSettings.data_fields[dict["fields_meta"][f]].instantiate()
+			var field = add_field(dict["fields_meta"][f])
 			if dict["fields"][f]:
+				#__await_ready_then_do(field, field.set_value.bind(dict["fields"][f]))
 				field.set_value(dict["fields"][f])
-			__await_ready_then_do(field, field.set_key.bind(f))
-			add_child(field)
-	return dict["outputs"] if dict.has("outputs") else {}
+			field.set_key(f)
+			#__await_ready_then_do(field, field.set_key.bind(f))
+	return dict["outputs"] if dict.has("outputs") else []
 
 ## Returns data used to recreate the node graph
 func get_graph_data() -> Dictionary:
 	return { "size": {"x":size.x,"y":size.y},
 	"position_offset": {"x": position_offset.x, "y": position_offset.y},}
+
+func _on_resize_request(new_size: Vector2) -> void:
+	size=new_size

@@ -1,0 +1,22 @@
+{
+  "ContentNode": {
+	"fields": {
+	  "content": "",
+	  "int": 2.0
+	},
+	"fields_meta": {
+	  "content": "Text Data Field",
+	  "int": "Int Data Field"
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": -30.8250026702881,
+		"y": 106.668998718262
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 364.0
+	  }
+	}
+  }
+}

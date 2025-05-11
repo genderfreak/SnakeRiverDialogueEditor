@@ -11,6 +11,7 @@
 offset_right = 240.0
 offset_bottom = 148.0
 mouse_filter = 1
+resizable = true
 title = "JSON Node"
 slot/0/left_enabled = true
 slot/0/left_type = 0
@@ -57,3 +58,5 @@ popup = NodePath("../PopupMenu")
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
 script = ExtResource("10_fhbf1")
+
+[connection signal="resize_request" from="." to="." method="_on_resize_request"]

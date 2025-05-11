@@ -1,8 +1,12 @@
 extends PopupMenu
 
 var popup_items = [
-	["Remove node", remove_node_popup]
+	["Remove node", remove_node_popup],
+	["Change name", change_name_popup],
+	["Save as template", save_as_template],
 ]
+
+var name_popup_scn = preload("res://scenes/name_popup.tscn")
 
 func _ready():
 	for entry in popup_items:
@@ -21,3 +25,19 @@ func remove_node_popup():
 	dialog.position=get_parent().get_global_mouse_position()-(Vector2(dialog.size)*Vector2(0.5,0.5))
 	add_child(dialog)
 	dialog.popup()
+
+func change_name_popup():
+	var name_popup = name_popup_scn.instantiate()
+	add_child(name_popup)
+	name_popup.line_edit.text=get_parent().name
+	name_popup.position=get_parent().get_global_mouse_position()-(Vector2(name_popup.size)*Vector2(0.5,0.5))
+	name_popup.confirmed.connect(change_name_popup_confirmed.bind(name_popup))
+	name_popup.canceled.connect(name_popup.queue_free)
+	name_popup.popup()
+
+func change_name_popup_confirmed(name_popup):
+	get_parent().change_name(name_popup.line_edit.text)
+	name_popup.queue_free()
+
+func save_as_template():
+	Globals.template_registry.save_template(get_parent().name,get_parent().save())

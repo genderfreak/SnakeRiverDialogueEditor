@@ -2,7 +2,7 @@ extends NullDataField
 
 class_name IntDataField
 
-@export var __value_node: Node
+@export var __value_node: SpinBox
 
 func _ready() -> void:
 	super._ready()
@@ -11,4 +11,4 @@ func _ready() -> void:
 
 func set_value(new_value: int):
 	value=new_value
-	__value_node.text=value
+	__value_node.set_value(value)

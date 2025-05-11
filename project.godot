@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 JSONFlowSettings="*res://scenes/json_flow_settings.gd"
+Globals="*res://scenes/globals.gd"
 
 [dotnet]
 

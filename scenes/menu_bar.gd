@@ -2,14 +2,17 @@ extends MenuBar
 
 @export var graph_edit: GraphEdit
 
+var template_manager: PackedScene = preload("res://scenes/templateRegistry/template_manager.tscn")
+
 var options = {
 	"File": [
 		["Save", _save_popup],
 		["Save as", _save_as_popup],
-		["Load", _load_popup]
+		["Load", _load_popup],
+		["Manage templates", open_template_manager],
 	],
 	"Edit": [
-	]
+	],
 }
 
 var current_save_path: String = ""
@@ -50,3 +53,8 @@ func _load_popup():
 	add_child(popup)
 	popup.popup_centered_ratio()
 	popup.file_selected.connect(graph_edit.load_from_file)
+
+func open_template_manager():
+	var window: Window = template_manager.instantiate()
+	add_child(window)
+	window.popup_centered()
