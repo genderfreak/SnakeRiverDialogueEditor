@@ -1,0 +1,13 @@
+# TODO
+- [ ] Undo/redo support
+- [ ] Duplicating nodes (ctrl-d + right click menu)
+- [ ] Deleting multiple nodes/DEL support
+- [ ] "New file" in menu bar
+- [ ] More warnings for potentially destructive actions (also undo will help)
+- [ ] Mobile support
+- [ ] Tab navigation for text fields
+- [ ] Autofocus new fields/nodes
+- [ ] Focus nodes that are right clicked
+- [ ] Add to graph from template manager
+- [ ] Better documentation (json schema especially!)
+- [ ] Beta: native builds
