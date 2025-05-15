@@ -10,4 +10,5 @@
 - [ ] Focus nodes that are right clicked
 - [ ] Add to graph from template manager
 - [ ] Better documentation (json schema especially!)
+- [ ] spellcheck in text nodes
 - [ ] Beta: native builds
