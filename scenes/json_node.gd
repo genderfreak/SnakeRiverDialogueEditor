@@ -14,21 +14,20 @@ var fields: Array = []
 
 func _ready():
 	change_name(name)
-	add_field_button.add_field.connect(add_field)
+	add_field_button.pressed.connect(add_field)
 	output_editor.output_change_request.connect(_output_change_request)
 	add_output()
 
 ## Add a field to the fields list, return the field
-func add_field(field_type: String):
-	var field = JSONFlowSettings.data_fields[field_type].instantiate()
-	field.field_type = field_type
+func add_field():
+	var field = JSONFlowSettings.data_field_scn.instantiate()
 	%Properties.add_child(field)
 	fields.append(field)
 	field.remove_field.connect(remove_field)
 	return field
 
 ## Remove a field
-func remove_field(field: NullDataField):
+func remove_field(field: Node):
 	fields.erase(field)
 	field.queue_free()
 
@@ -76,8 +75,8 @@ func save() -> Dictionary:
 		var fields_dict = {}
 		var fields_meta_dict = {}
 		for f in fields:
-			fields_dict.set(f.key,f.value)
-			fields_meta_dict.set(f.key,f.field_type)
+			fields_dict.set(f.get_key(),f.get_value())
+			fields_meta_dict.set(f.get_key(),f.get_type())
 		dict.merge({"fields": fields_dict})
 		dict.merge({"fields_meta": fields_meta_dict})
 	return dict
@@ -94,12 +93,11 @@ func load_from(dict: Dictionary) -> Array:
 	position_offset.y = dict["graph_data"]["position_offset"]["y"]
 	if dict.has("fields"):
 		for f in dict["fields"]:
-			var field = add_field(dict["fields_meta"][f])
+			var field = add_field()
+			field.set_type(dict["fields_meta"][f])
 			if dict["fields"][f]:
-				#__await_ready_then_do(field, field.set_value.bind(dict["fields"][f]))
 				field.set_value(dict["fields"][f])
 			field.set_key(f)
-			#__await_ready_then_do(field, field.set_key.bind(f))
 	return dict["outputs"] if dict.has("outputs") else []
 
 ## Returns data used to recreate the node graph

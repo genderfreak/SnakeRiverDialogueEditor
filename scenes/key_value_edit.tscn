@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl2ijsb7uaaf7"]
+
+[ext_resource type="Script" uid="uid://djia2nfnl7a1q" path="res://scenes/key_value_edit.gd" id="1_3w5te"]
+[ext_resource type="Texture2D" uid="uid://c622bngf0xj1r" path="res://icons/DropdownMenu.svg" id="1_p2ort"]
+[ext_resource type="Texture2D" uid="uid://dk58yfrfpjyg2" path="res://icons/Draggable.svg" id="2_3w5te"]
+[ext_resource type="PackedScene" uid="uid://natbe3l83xwx" path="res://addons/variantedit/nodes/variant_edit.tscn" id="3_avb5q"]
+
+[node name="KeyValueEdit" type="PanelContainer" node_paths=PackedStringArray("key_edit", "var_edit", "menu_button")]
+custom_minimum_size = Vector2(0, 71)
+anchors_preset = -1
+anchor_right = 0.197
+anchor_bottom = 0.097
+script = ExtResource("1_3w5te")
+key_edit = NodePath("HBox/VBoxContainer2/LineEdit")
+var_edit = NodePath("HBox/VBoxContainer2/VariantEdit2")
+menu_button = NodePath("HBox/VBoxContainer/Button")
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+
+[node name="Button" type="MenuButton" parent="HBox/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("1_p2ort")
+flat = false
+
+[node name="DragHandle" type="VBoxContainer" parent="HBox/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBox/VBoxContainer/DragHandle"]
+layout_mode = 2
+texture = ExtResource("2_3w5te")
+stretch_mode = 5
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LineEdit" type="LineEdit" parent="HBox/VBoxContainer2"]
+layout_mode = 2
+placeholder_text = "key"
+
+[node name="VariantEdit2" parent="HBox/VBoxContainer2" instance=ExtResource("3_avb5q")]
+layout_mode = 2
+size_flags_vertical = 3

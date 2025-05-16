@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://tmvobt64rumu"]
+
+[ext_resource type="Script" uid="uid://biw14lmlyjgnp" path="res://addons/variantedit/nodes/types/string_name.gd" id="1_fheco"]
+
+[node name="HBoxContainer" type="HBoxContainer" node_paths=PackedStringArray("child")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fheco")
+child = NodePath("String")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "@"
+
+[node name="String" type="TextEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+scroll_fit_content_height = true

@@ -1,22 +1,128 @@
 {
-  "ContentNode": {
-	"fields": {
-	  "content": "",
-	  "int": 2.0
-	},
-	"fields_meta": {
-	  "content": "Text Data Field",
-	  "int": "Int Data Field"
-	},
-	"graph_data": {
-	  "position_offset": {
-		"x": -30.8250026702881,
-		"y": 106.668998718262
-	  },
-	  "size": {
-		"x": 240.0,
-		"y": 364.0
-	  }
-	}
+  "Call": {
+    "fields": {
+      "argument": "",
+      "function": ""
+    },
+    "fields_meta": {
+      "argument": 4,
+      "function": 4
+    },
+    "graph_data": {
+      "position_offset": {
+        "x": 404.401428222656,
+        "y": -358.108642578125
+      },
+      "size": {
+        "x": 240.0,
+        "y": 313.0
+      }
+    },
+    "outputs": []
+  },
+  "Content": {
+    "fields": {
+      "content": ""
+    },
+    "fields_meta": {
+      "content": 4
+    },
+    "graph_data": {
+      "position_offset": {
+        "x": -386.135467529297,
+        "y": -372.379913330078
+      },
+      "size": {
+        "x": 240.0,
+        "y": 229.0
+      }
+    },
+    "outputs": []
+  },
+  "ContentCharacter": {
+    "fields": {
+      "character": "",
+      "content": ""
+    },
+    "fields_meta": {
+      "character": 4,
+      "content": 4
+    },
+    "graph_data": {
+      "position_offset": {
+        "x": -387.370635986328,
+        "y": -126.843849182129
+      },
+      "size": {
+        "x": 240.0,
+        "y": 313.0
+      }
+    },
+    "outputs": []
+  },
+  "ContentPassiveCheck": {
+    "fields": {
+      "character": "",
+      "content": "",
+      "passive_check": true,
+      "passive_check_goal": 0,
+      "passive_check_stat": ""
+    },
+    "fields_meta": {
+      "character": 4,
+      "content": 4,
+      "passive_check": 1,
+      "passive_check_goal": 2,
+      "passive_check_stat": 4
+    },
+    "graph_data": {
+      "position_offset": {
+        "x": -130.735443115234,
+        "y": -370.961303710938
+      },
+      "size": {
+        "x": 261.2587890625,
+        "y": 550.0
+      }
+    },
+    "outputs": []
+  },
+  "End": {
+    "fields": {
+      "end": 0
+    },
+    "fields_meta": {
+      "end": 2
+    },
+    "graph_data": {
+      "position_offset": {
+        "x": 150.07487487793,
+        "y": -368.609741210938
+      },
+      "size": {
+        "x": 238.228515625,
+        "y": 226.0
+      }
+    },
+    "outputs": []
+  },
+  "Label": {
+    "fields": {
+      "label": 0
+    },
+    "fields_meta": {
+      "label": 2
+    },
+    "graph_data": {
+      "position_offset": {
+        "x": 152.841430664062,
+        "y": -119.272666931152
+      },
+      "size": {
+        "x": 240.0,
+        "y": 237.0
+      }
+    },
+    "outputs": []
   }
 }

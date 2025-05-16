@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://natbe3l83xwx"]
+
+[ext_resource type="Script" uid="uid://cbogqydfs8vse" path="res://addons/variantedit/nodes/variant_edit.gd" id="1_n1ge0"]
+[ext_resource type="PackedScene" uid="uid://dry16sl1hdxmq" path="res://addons/variantedit/nodes/change_type_button.tscn" id="2_ba1dt"]
+[ext_resource type="Script" uid="uid://bpoqk5ai0fngu" path="res://addons/variantedit/nodes/change_type_button.gd" id="3_d07yk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h5ec5"]
+
+[node name="VariantEdit" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+alignment = 2
+script = ExtResource("1_n1ge0")
+
+[node name="EditableControl" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_h5ec5")
+
+[node name="ChangeTypeButton" parent="." instance=ExtResource("2_ba1dt")]
+layout_mode = 2
+script = ExtResource("3_d07yk")
+type = 1

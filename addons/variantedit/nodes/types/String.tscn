@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvlaghrgckju7"]
+
+[ext_resource type="Script" uid="uid://boowst4ein6kx" path="res://addons/variantedit/nodes/types/string.gd" id="1_5xc5b"]
+
+[node name="Control" type="HBoxContainer" node_paths=PackedStringArray("child")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5xc5b")
+child = NodePath("String")
+
+[node name="String" type="TextEdit" parent="."]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+scroll_fit_content_height = true

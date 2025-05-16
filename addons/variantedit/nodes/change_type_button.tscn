@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dry16sl1hdxmq"]
+
+[ext_resource type="Texture2D" uid="uid://di2e6kudtkjrw" path="res://addons/variantedit/icons/Edit.svg" id="1_a74nj"]
+
+[node name="MenuButton" type="MenuButton"]
+icon = ExtResource("1_a74nj")

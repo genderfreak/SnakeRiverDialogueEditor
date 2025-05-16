@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://do8gwhhwilcj6" path="res://icons/Add.svg" id="3_ilmqp"]
 
 [node name="OutputsEditor" type="HBoxContainer" node_paths=PackedStringArray("minus", "plus", "label")]
+theme_override_constants/separation = 10
 script = ExtResource("1_g6cw7")
 minus = NodePath("Minus")
 plus = NodePath("Plus")

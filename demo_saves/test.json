@@ -1,0 +1,27 @@
+{
+  "GraphNode": {
+	"fields": {
+	  "Speaker": "Name",
+	  "anotherkey": null,
+	  "content": "Some text here thats very long\nBlahblah\nblah",
+	  "enabled": true
+	},
+	"fields_meta": {
+	  "Speaker": 4,
+	  "anotherkey": 0,
+	  "content": 4,
+	  "enabled": 1
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 374.0,
+		"y": 96.0
+	  },
+	  "size": {
+		"x": 355.0,
+		"y": 522.0
+	  }
+	},
+	"outputs": []
+  }
+}

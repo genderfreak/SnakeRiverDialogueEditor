@@ -52,6 +52,7 @@ func load_from_file(path: String):
 	for i in get_children():
 		if i is GraphNode:
 			i.queue_free()
+			i.name = "__FREED_NODE"
 	var file = FileAccess.open(path,FileAccess.READ)
 	var json = JSON.new()
 	var err = json.parse(file.get_as_text())

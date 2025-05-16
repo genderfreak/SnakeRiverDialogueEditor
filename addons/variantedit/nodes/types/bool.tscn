@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm5jntmpmsqrk"]
+
+[ext_resource type="Script" uid="uid://tr5q4epr7s3d" path="res://addons/variantedit/nodes/types/bool.gd" id="1_okbnf"]
+
+[node name="Control" type="Control" node_paths=PackedStringArray("child")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_okbnf")
+child = NodePath("bool")
+
+[node name="bool" type="CheckBox" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "On"

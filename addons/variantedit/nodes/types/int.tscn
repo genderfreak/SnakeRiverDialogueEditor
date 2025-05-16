@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4nj2i6dl5le5"]
+
+[ext_resource type="Script" uid="uid://dg2d3lcrjd0uh" path="res://addons/variantedit/nodes/types/int.gd" id="1_3i2rl"]
+
+[node name="Control" type="HBoxContainer" node_paths=PackedStringArray("child")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3i2rl")
+child = NodePath("int")
+
+[node name="int" type="SpinBox" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+rounded = true
+allow_greater = true
+allow_lesser = true

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cop8fr5w0sdwi"]
+[gd_scene load_steps=8 format=3 uid="uid://cop8fr5w0sdwi"]
 
 [ext_resource type="Script" uid="uid://dflonhgcoyxvv" path="res://scenes/json_node.gd" id="1_36a0p"]
 [ext_resource type="Texture2D" uid="uid://do8gwhhwilcj6" path="res://icons/Add.svg" id="2_4r1s2"]
+[ext_resource type="Texture2D" uid="uid://c622bngf0xj1r" path="res://icons/DropdownMenu.svg" id="2_nlsva"]
 [ext_resource type="PackedScene" uid="uid://b1beso5f3pkx6" path="res://scenes/outputs_editor.tscn" id="2_qjxa0"]
-[ext_resource type="Script" uid="uid://dr4ppdbgqfgll" path="res://scenes/add_field_button.gd" id="4_pmavr"]
+[ext_resource type="Script" uid="uid://b310eqg0qkcwb" path="res://scenes/json_node_menu_button.gd" id="3_kmojc"]
 [ext_resource type="PackedScene" uid="uid://dl371oygb1ob3" path="res://scenes/right_click_menu.tscn" id="9_640a0"]
 [ext_resource type="Script" uid="uid://btjmb0dk22tt3" path="res://scenes/node_popup_menu.gd" id="10_fhbf1"]
 
@@ -23,35 +24,41 @@ slot/0/right_color = Color(1, 1, 1, 1)
 slot/0/right_icon = null
 slot/0/draw_stylebox = true
 script = ExtResource("1_36a0p")
-add_field_button = NodePath("Panel/Properties/Fields/AddFieldButton")
-output_editor = NodePath("Panel/Properties/OutputsEditor")
+add_field_button = NodePath("Properties/Fields/AddFieldButton")
+output_editor = NodePath("Properties/Options/OutputsEditor")
 
-[node name="Panel" type="PanelContainer" parent="."]
-layout_mode = 2
-
-[node name="Properties" type="VBoxContainer" parent="Panel"]
+[node name="Properties" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="OutputsEditor" parent="Panel/Properties" instance=ExtResource("2_qjxa0")]
+[node name="Options" type="HBoxContainer" parent="Properties"]
 layout_mode = 2
 
-[node name="Fields" type="HBoxContainer" parent="Panel/Properties"]
+[node name="MenuButton" type="Button" parent="Properties/Options" node_paths=PackedStringArray("popup")]
+layout_mode = 2
+action_mode = 0
+icon = ExtResource("2_nlsva")
+script = ExtResource("3_kmojc")
+popup = NodePath("../../../PopupMenu")
+
+[node name="OutputsEditor" parent="Properties/Options" instance=ExtResource("2_qjxa0")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Fields" type="HBoxContainer" parent="Properties"]
 layout_mode = 2
 
-[node name="FieldsLabel" type="Label" parent="Panel/Properties/Fields"]
+[node name="FieldsLabel" type="Label" parent="Properties/Fields"]
 layout_mode = 2
 text = "Fields"
 
-[node name="AddFieldButton" type="MenuButton" parent="Panel/Properties/Fields"]
+[node name="AddFieldButton" type="Button" parent="Properties/Fields"]
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Add"
 icon = ExtResource("2_4r1s2")
-flat = false
 alignment = 0
-script = ExtResource("4_pmavr")
 
 [node name="RightClickComponent" parent="." node_paths=PackedStringArray("popup") instance=ExtResource("9_640a0")]
 popup = NodePath("../PopupMenu")
@@ -60,3 +67,4 @@ popup = NodePath("../PopupMenu")
 script = ExtResource("10_fhbf1")
 
 [connection signal="resize_request" from="." to="." method="_on_resize_request"]
+[connection signal="pressed" from="Properties/Options/MenuButton" to="Properties/Options/MenuButton" method="__on_pressed"]

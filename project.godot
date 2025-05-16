@@ -24,3 +24,7 @@ Globals="*res://scenes/globals.gd"
 [dotnet]
 
 project/assembly_name="Arbritrary JSON flow editor"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/variantedit/plugin.cfg")

@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnsdqkobitf1b"]
+
+[ext_resource type="Script" uid="uid://c55ccx5kibirx" path="res://addons/variantedit/test_scene.gd" id="1_oo4ad"]
+[ext_resource type="PackedScene" uid="uid://natbe3l83xwx" path="res://addons/variantedit/nodes/variant_edit.tscn" id="2_oo4ad"]
+
+[node name="TestScene" type="Control" node_paths=PackedStringArray("vbox", "button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oo4ad")
+vbox = NodePath("VBoxContainer")
+button = NodePath("Button")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VariantEdit" parent="VBoxContainer" instance=ExtResource("2_oo4ad")]
+layout_mode = 2

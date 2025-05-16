@@ -1,0 +1,757 @@
+{
+  "Call": {
+	"fields": {
+	  "argument": "mind",
+	  "function": "level_stat"
+	},
+	"fields_meta": {
+	  "argument": 4,
+	  "function": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 4749.568359375,
+		"y": 75.0041427612305
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 313.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter10"
+	]
+  },
+  "Call2": {
+	"fields": {
+	  "argument": "heart",
+	  "function": "level_stat"
+	},
+	"fields_meta": {
+	  "argument": 4,
+	  "function": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 4763.01123046875,
+		"y": 414.542297363281
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 313.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter10"
+	]
+  },
+  "Call3": {
+	"fields": {
+	  "argument": "body",
+	  "function": "level_stat"
+	},
+	"fields_meta": {
+	  "argument": 4,
+	  "function": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 4762.87890625,
+		"y": 775.77587890625
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 313.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter10"
+	]
+  },
+  "Content": {
+	"fields": {
+	  "content": "You walk the worn path deep into the night. Dead leaves and twigs crunch beneath your feet with nearly every step."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": -362.533233642578,
+		"y": 265.172027587891
+	  },
+	  "size": {
+		"x": 333.170043945312,
+		"y": 345.365966796875
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter"
+	]
+  },
+  "Content10": {
+	"fields": {
+	  "content": "Maybe I'll find something worth giving a shit about, for once. Could be something cool out here."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 3842.3349609375,
+		"y": 430.892211914062
+	  },
+	  "size": {
+		"x": 324.7001953125,
+		"y": 306.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter8"
+	]
+  },
+  "Content11": {
+	"fields": {
+	  "content": "Exercise, mind-freak! I'm gonna get some god-damn exercise and I am going to feel GREAT!"
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 3894.23510742188,
+		"y": 736.265197753906
+	  },
+	  "size": {
+		"x": 240.000244140625,
+		"y": 387.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter9"
+	]
+  },
+  "Content12": {
+	"fields": {
+	  "content": "You remind yourself that your thoughts are only thoughts. Your mind feels a bit clearer."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 4487.06103515625,
+		"y": 72.2648849487305
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 387.0
+	  }
+	},
+	"outputs": [
+	  "Call"
+	]
+  },
+  "Content13": {
+	"fields": {
+	  "content": "You can feel your pulse quicken. It's slight, but perceptible."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 4486.03076171875,
+		"y": 437.036285400391
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 333.0
+	  }
+	},
+	"outputs": [
+	  "Call2"
+	]
+  },
+  "Content14": {
+	"fields": {
+	  "content": "You feel more sensitive to the little things."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 4480.30712890625,
+		"y": 781.632568359375
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 279.0
+	  }
+	},
+	"outputs": [
+	  "Call3"
+	]
+  },
+  "Content15": {
+	"fields": {
+	  "content": "As you trudge on, you see the comforting silhouette of the forsaken church, outlined by the glow of the moon."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 6009.1572265625,
+		"y": 410.59814453125
+	  },
+	  "size": {
+		"x": 261.96142578125,
+		"y": 387.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter13"
+	]
+  },
+  "Content16": {
+	"fields": {
+	  "content": "\\[Walk.\\]"
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 6666.5380859375,
+		"y": 397.421264648438
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 229.0
+	  }
+	},
+	"outputs": [
+	  "End"
+	]
+  },
+  "Content2": {
+	"fields": {
+	  "content": "I don't know..."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 855.299865722656,
+		"y": 167.425338745117
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 229.0
+	  }
+	},
+	"outputs": [
+	  "Content6"
+	]
+  },
+  "Content3": {
+	"fields": {
+	  "content": "Yea, my bed was nice. I should've stayed in bed."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 853.009399414062,
+		"y": 448.339721679688
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 306.0
+	  }
+	},
+	"outputs": [
+	  "Content5"
+	]
+  },
+  "Content4": {
+	"fields": {
+	  "content": "A cold breeze blows past you, cooling your temples."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 1769.61145019531,
+		"y": 275.99365234375
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 306.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter4"
+	]
+  },
+  "Content5": {
+	"fields": {
+	  "content": "No—you did the right thing."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 1151.34008789062,
+		"y": 479.062713623047
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 256.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter3"
+	]
+  },
+  "Content6": {
+	"fields": {
+	  "content": "You don't have to know. You made a good choice."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 1155.33312988281,
+		"y": 155.629699707031
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 306.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter3"
+	]
+  },
+  "Content7": {
+	"fields": {
+	  "content": "A sensory memory washes over you. The burning in your chest. The numb tingle on your face and fingers. The crushing weight of every belaboured breath."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 2327.05249023438,
+		"y": 243.283386230469
+	  },
+	  "size": {
+		"x": 342.85009765625,
+		"y": 363.549987792969
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter5"
+	]
+  },
+  "Content8": {
+	"fields": {
+	  "character": "heart",
+	  "content": "Those sensations are over. You can feel the chill in the pine scented air cooling your chest. Sounds of water, crickets, and other nocturnal critters fill the otherwise silent mountain air. The moon guides you along the path."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 2950.2021484375,
+		"y": 246.913330078125
+	  },
+	  "size": {
+		"x": 333.169921875,
+		"y": 522.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter6"
+	]
+  },
+  "Content9": {
+	"fields": {
+	  "content": "I'm gonna clear my head, and I am going to feel better. It's like meditation."
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 3862.4453125,
+		"y": 133.13508605957
+	  },
+	  "size": {
+		"x": 275.08984375,
+		"y": 306.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter7"
+	]
+  },
+  "ContentCharacter": {
+	"fields": {
+	  "character": "mind",
+	  "content": "Why are you here? Why couldn't we stay in bed?"
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 20.3881855010986,
+		"y": 254.018707275391
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 387.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter2"
+	]
+  },
+  "ContentCharacter10": {
+	"fields": {
+	  "character": "mind",
+	  "content": "Okay! Fine. Maybe it's not such a bad idea. Whatever. Still—you gotta figure out what the point is. Because you're not leaving until you do."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 5041.38818359375,
+		"y": 360.818756103516
+	  },
+	  "size": {
+		"x": 304.42041015625,
+		"y": 468.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter11"
+	]
+  },
+  "ContentCharacter11": {
+	"fields": {
+	  "character": "heart",
+	  "content": "You'll find the point. You always do."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 5379.59521484375,
+		"y": 398.885375976562
+	  },
+	  "size": {
+		"x": 264.8896484375,
+		"y": 360.0
+	  }
+	},
+	"outputs": [
+	  "ContentCharacter12"
+	]
+  },
+  "ContentCharacter12": {
+	"fields": {
+	  "character": "body",
+	  "content": "Even without looking up, you can feel it—we're close. A good thing, too, because your legs are burning like hell, and the cold is setting in."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 5672.41552734375,
+		"y": 376.923828125
+	  },
+	  "size": {
+		"x": 300.02783203125,
+		"y": 468.0
+	  }
+	},
+	"outputs": [
+	  "Content15"
+	]
+  },
+  "ContentCharacter13": {
+	"fields": {
+	  "branch": true,
+	  "character": "mind",
+	  "content": "This has been *entirely* too exhausting. Go inside, sit down, get some rest. We need it."
+	},
+	"fields_meta": {
+	  "branch": 1,
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 6296.12158203125,
+		"y": 400.349365234375
+	  },
+	  "size": {
+		"x": 329.31005859375,
+		"y": 468.0
+	  }
+	},
+	"outputs": [
+	  "Content16"
+	]
+  },
+  "ContentCharacter2": {
+	"fields": {
+	  "branch": true,
+	  "character": "body",
+	  "content": "The bed was so comfy... and warm... We had a really good thing going there."
+	},
+	"fields_meta": {
+	  "branch": 1,
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 310.745880126953,
+		"y": 246.671600341797
+	  },
+	  "size": {
+		"x": 400.930023193359,
+		"y": 466.0
+	  }
+	},
+	"outputs": [
+	  "Content2",
+	  "Content3"
+	]
+  },
+  "ContentCharacter3": {
+	"fields": {
+	  "character": "heart",
+	  "content": "You needed to go for a walk. You always feel better after a walk."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 1464.49438476562,
+		"y": 238.906692504883
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 414.0
+	  }
+	},
+	"outputs": [
+	  "Content4"
+	]
+  },
+  "ContentCharacter4": {
+	"fields": {
+	  "character": "body",
+	  "content": "She might be right. Bedtime was getting scary."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 2053.646484375,
+		"y": 242.319396972656
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 387.0
+	  }
+	},
+	"outputs": [
+	  "Content7"
+	]
+  },
+  "ContentCharacter5": {
+	"fields": {
+	  "character": "heart",
+	  "content": "Don't worry. You're safe now."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 2685.21215820312,
+		"y": 259.013366699219
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 360.0
+	  }
+	},
+	"outputs": [
+	  "Content8"
+	]
+  },
+  "ContentCharacter6": {
+	"fields": {
+	  "branch": true,
+	  "character": "mind",
+	  "content": "Okay, maybe this wasn't a bad idea. It's still to early to call. Regardless—what are we doing *here,* at midnight, in the middle of the woods, walking to that incredibly drab graveyard? How is that possibly supposed to make you feel better?"
+	},
+	"fields_meta": {
+	  "branch": 1,
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 3335.26220703125,
+		"y": 180.979522705078
+	  },
+	  "size": {
+		"x": 402.14013671875,
+		"y": 626.0
+	  }
+	},
+	"outputs": [
+	  "Content9",
+	  "Content10",
+	  "Content11"
+	]
+  },
+  "ContentCharacter7": {
+	"fields": {
+	  "character": "mind",
+	  "content": "Meditation? Sure, because [i]you[/i] like to meditate."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 4228.37255859375,
+		"y": 40.3638916015625
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 387.0
+	  }
+	},
+	"outputs": [
+	  "Content12"
+	]
+  },
+  "ContentCharacter8": {
+	"fields": {
+	  "character": "heart",
+	  "content": "So much love to give, but..."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 4221.1611328125,
+		"y": 425.057312011719
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 340.0
+	  }
+	},
+	"outputs": [
+	  "Content13"
+	]
+  },
+  "ContentCharacter9": {
+	"fields": {
+	  "character": "body",
+	  "content": "Yes, yes! New experiences, mountain air, the burn in your legs, it all tingles you in just the right ways."
+	},
+	"fields_meta": {
+	  "character": 4,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 4213.84130859375,
+		"y": 787.48876953125
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 495.0
+	  }
+	},
+	"outputs": [
+	  "Content14"
+	]
+  },
+  "End": {
+	"fields": {
+	  "end": 0
+	},
+	"fields_meta": {
+	  "end": 2
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 6953.5029296875,
+		"y": 404.741729736328
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 305.0
+	  }
+	},
+	"outputs": []
+  },
+  "Label": {
+	"fields": {
+	  "label": 0
+	},
+	"fields_meta": {
+	  "label": 2
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": -679.547241210938,
+		"y": 319.151000976562
+	  },
+	  "size": {
+		"x": 240.0,
+		"y": 237.0
+	  }
+	},
+	"outputs": [
+	  "Content"
+	]
+  }
+}

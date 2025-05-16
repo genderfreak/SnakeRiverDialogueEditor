@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://wk2tp17xuk7m"]
+
+[ext_resource type="Script" uid="uid://du0rxu6dj1a8h" path="res://addons/variantedit/nodes/types/nil.gd" id="1_gyq4e"]
+
+[node name="Control" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gyq4e")
+
+[node name="null" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "null"
+horizontal_alignment = 1
+vertical_alignment = 1
