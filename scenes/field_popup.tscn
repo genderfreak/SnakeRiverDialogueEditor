@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b14f4ghk5bvne"]
 
-[ext_resource type="Script" uid="uid://bfppcic55jnot" path="res://scenes/dataFields/dataFieldScenes/field_popup.gd" id="1_lcneh"]
+[ext_resource type="Script" uid="uid://bfppcic55jnot" path="res://scenes/field_popup.gd" id="1_lcneh"]
 
 [node name="PopupMenu" type="PopupMenu"]
 visible = true
