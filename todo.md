@@ -1,6 +1,7 @@
 # TODO
 - [ ] Undo/redo support
 - [ ] Duplicating nodes (ctrl-d + right click menu)
+- [ ] General shortcuts
 - [ ] Deleting multiple nodes/DEL support
 - [ ] "New file" in menu bar
 - [ ] More warnings for potentially destructive actions (also undo will help)
