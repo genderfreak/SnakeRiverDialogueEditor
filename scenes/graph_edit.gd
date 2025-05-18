@@ -49,10 +49,6 @@ func save_to_file(path: String):
 	file.close()
 
 func load_from_file(path: String):
-	for i in get_children():
-		if i is GraphNode:
-			i.queue_free()
-			i.name = "__FREED_NODE"
 	var file = FileAccess.open(path,FileAccess.READ)
 	var json = JSON.new()
 	var err = json.parse(file.get_as_text())
@@ -76,3 +72,10 @@ func load_from_file(path: String):
 				get_node(str(from_node)).add_output()
 			connect_json_node(from_node, cnt, to_node, 0)
 			cnt+=1
+
+func clear_graph():
+	for i in get_children():
+		if i is GraphNode:
+			i.queue_free()
+			i.name = "__FREED_NODE"
+	clear_connections()

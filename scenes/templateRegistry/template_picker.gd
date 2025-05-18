@@ -22,5 +22,5 @@ func _ready():
 		button_container.add_child(button)
 		button.pressed.connect(template_picked.emit.bind(template))
 
-func __template_picked(template):
+func __template_picked(_template):
 	if close_on_pick: get_ok_button().pressed.emit()

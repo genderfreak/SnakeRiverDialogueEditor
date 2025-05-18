@@ -6,6 +6,7 @@ var template_manager: PackedScene = preload("res://scenes/templateRegistry/templ
 
 var options = {
 	"File": [
+		["New", _new_popup],
 		["Save", _save_popup],
 		["Save as", _save_as_popup],
 		["Load", _load_popup],
@@ -34,6 +35,15 @@ func _create_file_popup() -> FileDialog:
 	popup.use_native_dialog=true
 	return popup
 
+func _new_popup():
+	var dialog = ConfirmationDialog.new()
+	dialog.dialog_text = "Clear the current graph?"
+	add_child(dialog)
+	dialog.popup_centered()
+	dialog.canceled.connect(func (): dialog.queue_free())
+	dialog.confirmed.connect(func (): graph_edit.clear_graph())
+	dialog.confirmed.connect(func (): dialog.queue_free())
+
 func _save_popup():
 	if current_save_path:
 		graph_edit.save_to_file(current_save_path)
@@ -46,6 +56,8 @@ func _save_as_popup():
 	popup.popup_centered_ratio()
 	popup.file_selected.connect(graph_edit.save_to_file)
 	popup.file_selected.connect(func (new_val): current_save_path = new_val)
+	popup.canceled.connect(popup.queue_free)
+	popup.file_selected.connect(func(_var): popup.queue_free())
 
 func _load_popup():
 	var popup = _create_file_popup()
@@ -53,6 +65,8 @@ func _load_popup():
 	add_child(popup)
 	popup.popup_centered_ratio()
 	popup.file_selected.connect(graph_edit.load_from_file)
+	popup.canceled.connect(popup.queue_free)
+	popup.file_selected.connect(func(_var): popup.queue_free())
 
 func open_template_manager():
 	var window: Window = template_manager.instantiate()
