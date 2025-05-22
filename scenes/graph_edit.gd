@@ -49,6 +49,7 @@ func save_to_file(path: String):
 	file.close()
 
 func load_from_file(path: String):
+	clear_graph()
 	var file = FileAccess.open(path,FileAccess.READ)
 	var json = JSON.new()
 	var err = json.parse(file.get_as_text())

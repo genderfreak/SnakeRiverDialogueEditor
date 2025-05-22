@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b62q0y177muf3" path="res://scenes/templateRegistry/template_manager_item.gd" id="1_5a5fi"]
 
-[node name="PanelContainer" type="PanelContainer" node_paths=PackedStringArray("label", "remove_button")]
+[node name="PanelContainer" type="PanelContainer" node_paths=PackedStringArray("label", "remove_button", "add_button")]
 script = ExtResource("1_5a5fi")
 label = NodePath("VBoxContainer/Label")
-remove_button = NodePath("VBoxContainer/HBoxContainer/Button")
+remove_button = NodePath("VBoxContainer/HBoxContainer/remove")
+add_button = NodePath("VBoxContainer/HBoxContainer/add")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -21,6 +22,11 @@ fit_content = true
 layout_mode = 2
 alignment = 2
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="add" type="Button" parent="VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Add to graph"
+
+[node name="remove" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Remove"

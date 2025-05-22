@@ -4,6 +4,7 @@ extends Window
 var item_scene: PackedScene = preload("res://scenes/templateRegistry/template_manager_item.tscn")
 
 var template_registry = Globals.template_registry
+var graph_edit: GraphEdit
 
 func _ready():
 	update_template_list()
