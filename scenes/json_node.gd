@@ -12,6 +12,8 @@ var outputs: Array = []
 
 var fields: Array = []
 
+signal name_changed(instance, old_name, new_name)
+
 func _ready():
 	change_name(name)
 	add_field_button.pressed.connect(add_field)
@@ -57,6 +59,7 @@ func remove_output():
 
 ## Change node's name. Update title text to match.
 func change_name(new_name):
+	name_changed.emit(self, name, new_name)
 	name = new_name
 	title = name
 

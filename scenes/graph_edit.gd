@@ -13,13 +13,29 @@ func add_node(data: Dictionary = {}, node_name: String = ""):
 		instance.load_from(data)
 	if node_name:
 		instance.change_name(node_name)
+	instance.name_changed.connect(__on_name_changed)
 	instance.position_offset = (get_local_mouse_position() + scroll_offset) / zoom
 
+## Called when a child's name is changed, reconnects connections
+## Has a bug that causes old connections to keep drawing until moved, not sure how to fix, but its not a big deal
+func __on_name_changed(instance, old_name, new_name):
+	for node in get_inputting_nodes(old_name):
+		connect_json_node(node["from_node"],node["from_port"],new_name,node["to_port"])
+
+## Returns a list of nodes connected to from_node in from_port
 func get_nodes_connected_to(from_node: StringName, from_port: int):
 	var array = []
 	for node in connections:
 		if node.from_node == from_node and node.from_port == from_port:
 			array.append({"to_node": node.to_node,"to_port": node.to_port})
+	return array
+
+## Returns a list of nodes that input to_node
+func get_inputting_nodes(to_node: StringName):
+	var array = []
+	for node in connections:
+		if node.to_node == to_node:
+			array.append(node)
 	return array
 
 func _on_connection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
