@@ -41,7 +41,7 @@ func _new_popup():
 	add_child(dialog)
 	dialog.popup_centered()
 	dialog.canceled.connect(func (): dialog.queue_free())
-	dialog.confirmed.connect(func (): graph_edit.clear_graph())
+	dialog.confirmed.connect(func (): graph_edit.clear_graph(); current_save_path="")
 	dialog.confirmed.connect(func (): dialog.queue_free())
 
 func _save_popup():
