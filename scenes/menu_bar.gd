@@ -64,9 +64,13 @@ func _load_popup():
 	popup.file_mode = FileDialog.FILE_MODE_OPEN_FILE
 	add_child(popup)
 	popup.popup_centered_ratio()
-	popup.file_selected.connect(graph_edit.load_from_file)
+	popup.file_selected.connect(_on_load_file_selected)
 	popup.canceled.connect(popup.queue_free)
 	popup.file_selected.connect(func(_var): popup.queue_free())
+
+func _on_load_file_selected(file):
+	graph_edit.load_from_file(file)
+	current_save_path = file
 
 func open_template_manager():
 	var window: Window = template_manager.instantiate()
