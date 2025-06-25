@@ -9,3 +9,4 @@
 - Shortcuts, shortcut manager
 - Undo/redo
 - Info window, help window (some sort of tutorial)
+- Toast system
