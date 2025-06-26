@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmxc377b42bis"]
+
+[ext_resource type="Script" uid="uid://caj6n06myi4ea" path="res://addons/variantedit/nodes/types/subscenes/array_item.gd" id="1_i4ar3"]
+[ext_resource type="Texture2D" uid="uid://ccsqw7kd5lh8w" path="res://addons/variantedit/icons/Remove.svg" id="2_i4ar3"]
+
+[node name="ArrayItem" type="HBoxContainer" node_paths=PackedStringArray("remove_button")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_i4ar3")
+remove_button = NodePath("Remove")
+
+[node name="Remove" type="Button" parent="."]
+layout_mode = 2
+icon = ExtResource("2_i4ar3")
+flat = true

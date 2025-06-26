@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://x1v4dy3ita8i"]
+
+[ext_resource type="PackedScene" uid="uid://bmxc377b42bis" path="res://addons/variantedit/nodes/types/subscenes/array_item.tscn" id="1_lo10q"]
+[ext_resource type="Texture2D" uid="uid://dhww2et684f2v" path="res://addons/variantedit/icons/Add.svg" id="1_oub5w"]
+[ext_resource type="Script" uid="uid://dgrq3tp4qa1f2" path="res://addons/variantedit/nodes/types/Array.gd" id="1_xbres"]
+
+[node name="Array" type="VBoxContainer" node_paths=PackedStringArray("values", "add_item_button")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xbres")
+values = NodePath("Values")
+add_item_button = NodePath("AddButton")
+
+[node name="Values" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ArrayItem" parent="Values" instance=ExtResource("1_lo10q")]
+layout_mode = 2
+
+[node name="AddButton" type="Button" parent="."]
+layout_mode = 2
+icon = ExtResource("1_oub5w")
+icon_alignment = 1
