@@ -35,7 +35,7 @@ func get_key():
 
 ## Return the value
 func get_value():
-	return var_edit.value
+	return var_edit.get_value()
 
 func get_type():
 	return var_edit.type

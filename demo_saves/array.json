@@ -1,0 +1,72 @@
+{
+  "GraphNode": {
+	"fields": {
+	  "choices": [
+		"a string",
+		"string name",
+		0,
+		[
+		  "a nested array",
+		  "with strings"
+		]
+	  ],
+	  "content": "time to make a choice!"
+	},
+	"fields_meta": {
+	  "choices": 28,
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 186.752716064453,
+		"y": 144.623641967773
+	  },
+	  "size": {
+		"x": 409.0,
+		"y": 550.0
+	  }
+	},
+	"outputs": [
+	  "_GraphNode_139",
+	  "_GraphNode_165"
+	]
+  },
+  "_GraphNode_139": {
+	"fields": {
+	  "content": "Some content"
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 723.355590820312,
+		"y": 60.4250526428223
+	  },
+	  "size": {
+		"x": 335.589965820312,
+		"y": 234.0
+	  }
+	},
+	"outputs": []
+  },
+  "_GraphNode_165": {
+	"fields": {
+	  "content": "Some other content"
+	},
+	"fields_meta": {
+	  "content": 4
+	},
+	"graph_data": {
+	  "position_offset": {
+		"x": 716.349670410156,
+		"y": 386.023986816406
+	  },
+	  "size": {
+		"x": 432.390014648438,
+		"y": 234.0
+	  }
+	},
+	"outputs": []
+  }
+}
