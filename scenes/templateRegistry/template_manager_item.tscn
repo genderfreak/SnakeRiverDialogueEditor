@@ -23,7 +23,6 @@ layout_mode = 2
 alignment = 2
 
 [node name="add" type="Button" parent="VBoxContainer/HBoxContainer"]
-visible = false
 layout_mode = 2
 text = "Add to graph"
 

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 JSONFlowSettings="*res://scenes/json_flow_settings.gd"
 Globals="*res://scenes/globals.gd"
+Locator="*res://scenes/locator/locator.gd"
 
 [dotnet]
 
@@ -27,7 +28,7 @@ project/assembly_name="Arbritrary JSON flow editor"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/theme_gen_save_sync/plugin.cfg", "res://addons/variantedit/plugin.cfg")
+enabled=PackedStringArray("res://addons/variantedit/plugin.cfg")
 
 [rendering]
 

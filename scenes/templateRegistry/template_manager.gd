@@ -4,7 +4,6 @@ extends Window
 var item_scene: PackedScene = preload("res://scenes/templateRegistry/template_manager_item.tscn")
 
 var template_registry = Globals.template_registry
-var graph_edit: GraphEdit
 
 func _ready():
 	update_template_list()
@@ -18,6 +17,9 @@ func update_template_list():
 		item_container.add_child(item)
 		item.template_key = template
 		item.remove_button.pressed.connect(remove_template.bind(item))
+		item.add_button.pressed.connect(Locator.graph_edit.add_node.bind(
+			template_registry.get_template_data(template),"",
+			( Locator.graph_edit.size / Vector2(2,2) ) - Vector2(100,100)))
 
 func remove_template(node: Node):
 	template_registry.remove_template(node.template_key)

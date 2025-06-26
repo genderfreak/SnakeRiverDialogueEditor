@@ -3,10 +3,11 @@ extends GraphEdit
 @export var json_flow_node: PackedScene = preload("res://scenes/json_node.tscn")
 
 func _ready():
+	Locator.graph_edit = self
 	connection_request.connect(_on_connection_request)
 	disconnection_request.connect(_on_disconnection_request)
 
-func add_node(data: Dictionary = {}, node_name: String = ""):
+func add_node(data: Dictionary = {}, node_name: String = "", pos: Variant = false):
 	var instance = json_flow_node.instantiate()
 	add_child(instance)
 	if data:
@@ -14,7 +15,10 @@ func add_node(data: Dictionary = {}, node_name: String = ""):
 	if node_name:
 		instance.change_name(node_name)
 	instance.name_changed.connect(__on_name_changed)
-	instance.position_offset = (get_local_mouse_position() + scroll_offset) / zoom
+	if pos is Vector2:
+		instance.position_offset = (pos + scroll_offset) / zoom
+	else:
+		instance.position_offset = (get_local_mouse_position() + scroll_offset) / zoom
 
 ## Called when a child's name is changed, reconnects connections
 ## Has a bug that causes old connections to keep drawing until moved, not sure how to fix, but its not a big deal
@@ -63,6 +67,7 @@ func save_to_file(path: String):
 	var file = FileAccess.open(path,FileAccess.WRITE)
 	file.store_string(JSON.stringify(dict, "  "))
 	file.close()
+	Locator.toaster.toast("File saved as %s" % path)
 
 func load_from_file(path: String):
 	clear_graph()

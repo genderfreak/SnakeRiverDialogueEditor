@@ -1,7 +1,6 @@
 # TODO
 ## Changes
 - Rework add node right click menu
-- Add to graph from template manager
 - DEL to remove nodes
 - Remove multiple nodes at once
 - Tab navigation for text fields
@@ -14,6 +13,6 @@
 - Mobile support
 - Shortcuts, shortcut manager
 - Undo/redo
-- Info window, help window (some sort of tutorial)
+- help window (some sort of tutorial)
 - Toast system
 - Documentation (json schema especially)

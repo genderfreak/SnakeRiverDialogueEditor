@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b78mcsfy2ddck"]
+
+[ext_resource type="Script" uid="uid://b7svrqyqksb10" path="res://scenes/toasts/toast.gd" id="1_kk12m"]
+
+[node name="Panel" type="PanelContainer" node_paths=PackedStringArray("label")]
+script = ExtResource("1_kk12m")
+label = NodePath("MarginContainer/Label")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="MarginContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+autowrap_mode = 2

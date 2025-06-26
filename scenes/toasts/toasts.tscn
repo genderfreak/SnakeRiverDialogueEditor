@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0bq3p1q5oxwj"]
+
+[ext_resource type="Script" uid="uid://b4yyxxibmgrqo" path="res://scenes/toasts/toasts.gd" id="1_w87dw"]
+
+[node name="Toasts" type="MarginContainer" node_paths=PackedStringArray("vbox")]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 443.0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+script = ExtResource("1_w87dw")
+vbox = NodePath("VBox")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 2
