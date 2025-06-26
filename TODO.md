@@ -14,5 +14,4 @@
 - Shortcuts, shortcut manager
 - Undo/redo
 - help window (some sort of tutorial)
-- Toast system
 - Documentation (json schema especially)
