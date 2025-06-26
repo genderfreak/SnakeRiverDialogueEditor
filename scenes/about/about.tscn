@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqlawwjol2xhs"]
+
+[ext_resource type="Texture2D" uid="uid://bsc22e8d44i8f" path="res://scenes/about/progress.svg" id="1_dfybg"]
+[ext_resource type="Texture2D" uid="uid://cdlwgeo8wfn13" path="res://icon.svg" id="1_h66l4"]
+
+[node name="Control" type="Window"]
+title = "About Snake River Dialogue Editor"
+initial_position = 2
+size = Vector2i(600, 356)
+unresizable = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 528.0
+offset_top = 9.0
+offset_right = 588.0
+offset_bottom = 49.0
+texture = ExtResource("1_dfybg")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_h66l4")
+expand_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[i]Snake River Dialogue Editor[/i]
+created and maintained by Cascadia
+@ https://github.com/genderfreak"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer3"]
+layout_mode = 2
+bbcode_enabled = true
+text = "This software is in active alpha development. Expect bugs and incomplete features."
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer4"]
+layout_mode = 2
+bbcode_enabled = true
+text = "This software is provided under the GNU GPL 3.0."
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Created with Godot Engine (MIT license)
+Copyright (c) 2014-present Godot Engine contributors.
+Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1

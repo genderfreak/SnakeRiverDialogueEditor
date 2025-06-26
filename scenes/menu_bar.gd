@@ -14,6 +14,9 @@ var options = {
 	],
 	"Edit": [
 	],
+	"About": [
+		["About Snake River", open_about_window],
+	]
 }
 
 var current_save_path: String = ""
@@ -76,3 +79,8 @@ func open_template_manager():
 	var window: Window = template_manager.instantiate()
 	add_child(window)
 	window.popup_centered()
+
+func open_about_window():
+	var window = load("res://scenes/about/about.tscn").instantiate()
+	add_child(window)
+	window.close_requested.connect(window.queue_free)
