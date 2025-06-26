@@ -1,1 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="124" height="124" x="2" y="2" fill="#363d52" stroke="#212532" stroke-width="4" rx="14"/><g fill="#fff" transform="translate(12.322 12.322)scale(.101)"><path d="M105 673v33q407 354 814 0v-33z"/><path fill="#478cbf" d="m105 673 152 14q12 1 15 14l4 67 132 10 8-61q2-11 15-15h162q13 4 15 15l8 61 132-10 4-67q3-13 15-14l152-14V427q30-39 56-81-35-59-83-108-43 20-82 47-40-37-88-64 7-51 8-102-59-28-123-42-26 43-46 89-49-7-98 0-20-46-46-89-64 14-123 42 1 51 8 102-48 27-88 64-39-27-82-47-48 49-83 108 26 42 56 81zm0 33v39c0 276 813 276 814 0v-39l-134 12-5 69q-2 10-14 13l-162 11q-12 0-16-11l-10-65H446l-10 65q-4 11-16 11l-162-11q-12-3-14-13l-5-69z"/><path d="M483 600c0 34 58 34 58 0v-86c0-34-58-34-58 0z"/><circle cx="725" cy="526" r="90"/><circle cx="299" cy="526" r="90"/></g><g fill="#414042" transform="translate(12.322 12.322)scale(.101)"><circle cx="307" cy="532" r="60"/><circle cx="717" cy="532" r="60"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="0.25in"
+   height="0.25in"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg2861"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs2865" /><style
+     type="text/css"
+     id="style4134">
+	.st0{fill:#000000;}
+</style><style
+     type="text/css"
+     id="style4902">
+	.st0{fill:#000000;}
+</style><rect
+     style="fill:#fdfdfd;fill-opacity:1;stroke:#628cb9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="rect7295"
+     width="21.352034"
+     height="20.920118"
+     x="1.2913811"
+     y="1.61603"
+     ry="0" /><g
+     id="g4906"
+     transform="matrix(-0.04043282,0,0,0.04459232,22.440784,0.68640454)"
+     style="fill:#628cb9;fill-opacity:1">
+	<path
+   class="st0"
+   d="M 328.653,272.369 C 221.045,225.405 168.211,207.807 131.046,162.792 92.995,116.722 198.90555,50.314648 245.87055,19.050648 L 167.85723,18.597459 C 76.625223,51.822459 -74.443,172.296 56.684,266.501 195.598,366.289 88.72722,421.42708 18.28422,496.26308 L 506.703,495.92 C 534.1,405.403 452.308,326.321 328.653,272.369 Z"
+   id="path4904"
+   style="fill:#628cb9;fill-opacity:1" />
+<path
+   class="st0"
+   d="M 382.63813,291.07695 C 306.71448,248.04315 269.43705,231.91784 243.215,190.66994 c -18.11728,-28.48769 -15.60546,-79.14773 22.82797,-84.98951 0,0 -11.01115,-5.16891 0.10497,-11.534191 C 133.39174,93.841579 148.5015,225.3021 208.70326,286.42643 306.7151,377.86364 319.13865,427.34668 269.43705,495.92 H 508.26267 C 527.59283,412.97795 469.88386,340.51396 382.63813,291.07695 Z"
+   id="path7267"
+   style="fill:#628cb9;fill-opacity:1;stroke-width:0.80406" /></g><g
+     id="g7878"
+     transform="translate(1.1275583,1.3686281)"><rect
+       style="fill:none;fill-opacity:1;stroke:#628cb9;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect7152"
+       width="8.7188339"
+       height="5.724762"
+       x="1.8004508"
+       y="2.0321078" /><path
+       style="fill:none;stroke:#628cb9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 1.7072005,3.5497075 10.533805,3.5369335"
+       id="path7265" /><path
+       style="fill:none;stroke:#628cb9;stroke-width:0.863769px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 3.1557064,5.0865799 9.7063735,5.0737379"
+       id="path7289" /><path
+       style="fill:none;stroke:#628cb9;stroke-width:0.863769px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 3.1557064,6.3724961 9.7063735,6.3596541"
+       id="path7291" /><ellipse
+       style="fill:#fdfdfd;fill-opacity:1;stroke:#628cb9;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path8614"
+       cx="10.573987"
+       cy="4.14605"
+       rx="0.57593513"
+       ry="0.57137299" /></g></svg>
