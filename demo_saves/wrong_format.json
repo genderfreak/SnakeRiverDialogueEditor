@@ -1,0 +1,21 @@
+[
+	{
+		"fields": {
+			"This is bad data (incorrect format)": null
+		},
+		"fields_meta": {
+			"This is bad data (incorrect format)": 0
+		},
+		"graph_data": {
+			"position_offset": {
+			"x": 459.0,
+			"y": 144.0
+			},
+			"size": {
+			"x": 321.0,
+			"y": 234.0
+			}
+		},
+		"outputs": []
+	}
+]

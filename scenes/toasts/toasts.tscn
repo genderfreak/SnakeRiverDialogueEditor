@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://b4yyxxibmgrqo" path="res://scenes/toasts/toasts.gd" id="1_w87dw"]
 
 [node name="Toasts" type="MarginContainer" node_paths=PackedStringArray("vbox")]
-anchors_preset = 9
+anchors_preset = -1
+anchor_right = 0.761
 anchor_bottom = 1.0
-offset_right = 443.0
 grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 18
@@ -17,4 +17,5 @@ vbox = NodePath("VBox")
 
 [node name="VBox" type="VBoxContainer" parent="."]
 layout_mode = 2
+mouse_filter = 2
 alignment = 2

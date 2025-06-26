@@ -76,24 +76,27 @@ func load_from_file(path: String):
 	var err = json.parse(file.get_as_text())
 	if err==OK:
 		if json.data is Dictionary:
-			pass
+			var to_connect = {}
+			for new_name in json.data:
+				var new_node = JSONFlowSettings.flow_node.instantiate()
+				new_node.name = new_name
+				add_child(new_node)
+				to_connect.set(new_node.name, new_node.load_from(json.data[new_name]))
+			for from_node in to_connect:
+				var cnt = 0
+				for to_node in to_connect[from_node]:
+					if cnt>0:
+						get_node(str(from_node)).add_output()
+					connect_json_node(from_node, cnt, to_node, 0)
+					cnt+=1
+			Locator.toaster.toast("File loaded from %s" % path)
 		else:
+			Locator.toaster.toast("Failed to load file from %s, unexpected data type %s" % [path, type_string(typeof(json.data))], 5)
 			push_warning("JSON failure, laugh at this user! (unexpected data type %s)" % type_string(typeof(json.data)))
 	else:
+		Locator.toaster.toast("Failed to load file from " + path + ", JSON Parse Error: " + json.get_error_message() + " at line " + str(json.get_error_line()), 5)
 		push_warning("JSON Parse Error: " + json.get_error_message(), " at line ", json.get_error_line())
-	var to_connect = {}
-	for new_name in json.data:
-		var new_node = JSONFlowSettings.flow_node.instantiate()
-		new_node.name = new_name
-		add_child(new_node)
-		to_connect.set(new_node.name, new_node.load_from(json.data[new_name]))
-	for from_node in to_connect:
-		var cnt = 0
-		for to_node in to_connect[from_node]:
-			if cnt>0:
-				get_node(str(from_node)).add_output()
-			connect_json_node(from_node, cnt, to_node, 0)
-			cnt+=1
+	
 
 func clear_graph():
 	for i in get_children():

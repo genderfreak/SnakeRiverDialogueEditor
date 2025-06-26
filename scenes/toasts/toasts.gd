@@ -7,11 +7,11 @@ var _toast_node = preload("res://scenes/toasts/toast.tscn")
 func _ready():
 	Locator.toaster = self
 
-func toast(text):
+func toast(text, time=2):
 	var new_toast = _toast_node.instantiate()
 	new_toast.set_text(text)
 	vbox.add_child(new_toast)
-	var timer = get_tree().create_timer(2)
+	var timer = get_tree().create_timer(time)
 	timer.timeout.connect(tween_node_out.bind(new_toast))
 
 func tween_node_out(node):

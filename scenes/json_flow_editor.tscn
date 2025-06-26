@@ -49,4 +49,4 @@ script = ExtResource("2_rxfvf")
 
 [node name="Toasts" parent="." instance=ExtResource("2_jkc8f")]
 layout_mode = 1
-offset_right = 428.0
+anchor_right = 0.704
