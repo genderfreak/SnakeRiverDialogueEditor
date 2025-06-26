@@ -2,9 +2,6 @@ extends EditableField
 
 @export var child: CheckBox
 
-func _ready():
-	child.pressed.connect(value_changed.emit)
-
 func get_value():
 	return child.button_pressed
 

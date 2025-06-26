@@ -15,5 +15,4 @@ func get_value():
 	return(var_edit.get_value())
 
 func set_value(new_value):
-	var_edit.change_type(typeof(new_value))
-	var_edit.set_value_and_update_visuals(new_value)
+	var_edit.set_value(new_value)

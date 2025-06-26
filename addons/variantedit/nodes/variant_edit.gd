@@ -2,8 +2,8 @@
 extends HBoxContainer
 class_name VariantEdit
 
-var value: Variant = null
-var type: Variant.Type = TYPE_NIL
+var __value: Variant = null
+var __type: Variant.Type = TYPE_NIL
 
 @onready var change_type_button: TypeSelectionButton = $ChangeTypeButton
 @onready var edit_container: Control = $EditableControl
@@ -21,23 +21,26 @@ var edit_scenes = {
 
 func _ready():
 	change_type_button.type_changed.connect(change_type)
-	change_type(type)
+	change_type(__type)
 
 func get_value():
 	update_value()
-	return value
+	return __value
 
-func update_value(_new_value=null):
-	value = edit_node.get_value()
+func update_value():
+	__value = edit_node.get_value()
 
-func set_value_and_update_visuals(new_value):
-	value=new_value
-	edit_node.set_value(value)
+func set_value(new_value):
+	change_type(typeof(new_value))
+	__value=new_value
+	edit_node.set_value(__value)
+
+func get_type():
+	return __type
 
 func change_type(new_type: Variant.Type):
-	type = new_type
+	__type = new_type
 	if edit_node: edit_node.queue_free()
 	edit_node = edit_scenes[new_type].instantiate()
 	edit_container.add_child(edit_node)
-	edit_node.value_changed.connect(update_value)
 	update_value()

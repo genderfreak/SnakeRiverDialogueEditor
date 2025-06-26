@@ -96,8 +96,8 @@ func load_from(dict: Dictionary) -> Array:
 	position_offset.y = dict["graph_data"]["position_offset"]["y"]
 	if dict.has("fields"):
 		for f in dict["fields"]:
-			var field = add_field()
-			field.set_type(dict["fields_meta"][f])
+			var field = add_field() # keyvalue edit
+			#field.set_type(dict["fields_meta"][f])
 			if dict["fields"][f]:
 				field.set_value(dict["fields"][f])
 			field.set_key(f)

@@ -37,9 +37,11 @@ func get_key():
 func get_value():
 	return var_edit.get_value()
 
+## Return the type
 func get_type():
-	return var_edit.type
+	return var_edit.get_type()
 
+## Set the var edit's type
 func set_type(type: Variant.Type):
 	var_edit.change_type(type)
 
@@ -47,12 +49,9 @@ func set_type(type: Variant.Type):
 func set_key(key: String):
 	key_edit.text=StringName(key)
 
+## Set the value of the field
 func set_value(value: Variant):
-	#if not typeof(value) in TypeSelectionButton.ALLOWED_TYPES:
-		#push_error("Attempted to set key value editor value to unsupported type %s in node %s" % [type_string(value),self])
-		#return
-	#var_edit.change_type(typeof(value))
-	var_edit.set_value_and_update_visuals(value)
+	var_edit.set_value(value)
 
 ## Send a signal requesting deletion
 func delete_self():
