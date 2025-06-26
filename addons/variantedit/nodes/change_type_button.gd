@@ -8,6 +8,7 @@ const ALLOWED_TYPES: Array = [
 	TYPE_FLOAT,
 	TYPE_STRING,
 	TYPE_STRING_NAME,
+	TYPE_ARRAY,
 ]
 
 @export var type: Variant.Type = ALLOWED_TYPES[0] as Variant.Type

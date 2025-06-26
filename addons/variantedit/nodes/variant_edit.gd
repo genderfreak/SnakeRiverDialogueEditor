@@ -16,11 +16,16 @@ var edit_scenes = {
 	TYPE_FLOAT: preload("res://addons/variantedit/nodes/types/float.tscn"),
 	TYPE_STRING: preload("res://addons/variantedit/nodes/types/String.tscn"),
 	TYPE_STRING_NAME: preload("res://addons/variantedit/nodes/types/StringName.tscn"),
+	TYPE_ARRAY: preload("res://addons/variantedit/nodes/types/Array.tscn"),
 }
 
 func _ready():
 	change_type_button.type_changed.connect(change_type)
 	change_type(type)
+
+func get_value():
+	update_value()
+	return value
 
 func update_value(_new_value=null):
 	value = edit_node.get_value()
