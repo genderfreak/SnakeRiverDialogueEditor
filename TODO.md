@@ -9,7 +9,7 @@
 - Autofocus new fields/nodes
 - Focus nodes that are right clicked
 - Spellcheck in text nodes
-- VariantEdit: arrays, dictionaries
+- VariantEdit: dictionaries
 ## Systems
 - Mobile support
 - Shortcuts, shortcut manager
