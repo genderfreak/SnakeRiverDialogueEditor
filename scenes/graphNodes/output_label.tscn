@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dty270nrwb5fj"]
+[gd_scene load_steps=0 format=3 uid="uid://dty270nrwb5fj"]
 
 [node name="OutputLabel" type="Label"]
 text = "0"

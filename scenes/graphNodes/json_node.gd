@@ -5,7 +5,7 @@ class_name JSONFlowNode
 @export var add_field_button: Node
 @export var output_editor: Node
 
-var output_label_scn: PackedScene = preload("res://scenes/output_label.tscn")
+var output_label_scn: PackedScene = preload("res://scenes/graphNodes/output_label.tscn")
 
 var output_labels: Array = []
 var outputs: Array = []

@@ -1,8 +1,8 @@
 extends Node
 
-var data_field_scn: PackedScene = preload("res://scenes/key_value_edit.tscn")
+var data_field_scn: PackedScene = preload("res://scenes/fields/key_value_edit.tscn")
 
-var flow_node := preload("res://scenes/json_node.tscn")
+var flow_node := preload("res://scenes/graphNodes/json_node.tscn")
 
 var template_registry = TemplateRegistry.new()
 

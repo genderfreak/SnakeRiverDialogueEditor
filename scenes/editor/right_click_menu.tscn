@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dl371oygb1ob3"]
 
-[ext_resource type="Script" uid="uid://dboxnxbm2peuh" path="res://scenes/right_click_menu.gd" id="1_dl2vx"]
+[ext_resource type="Script" uid="uid://dboxnxbm2peuh" path="res://scenes/editor/right_click_menu.gd" id="1_dl2vx"]
 
 [node name="RightClickComponent" type="Node"]
 script = ExtResource("1_dl2vx")

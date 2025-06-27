@@ -5,7 +5,7 @@ extends PanelContainer
 
 @export var menu_button: MenuButton
 
-var __right_click_menu_scene: PackedScene = preload("res://scenes/right_click_menu.tscn")
+var __right_click_menu_scene: PackedScene = preload("res://scenes/editor/right_click_menu.tscn")
 var right_click_menu: Node
 var field_popup: PopupMenu
 

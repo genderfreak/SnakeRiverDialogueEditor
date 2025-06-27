@@ -1,6 +1,6 @@
 extends GraphEdit
 
-@export var json_flow_node: PackedScene = preload("res://scenes/json_node.tscn")
+@export var json_flow_node: PackedScene = preload("res://scenes/graphNodes/json_node.tscn")
 
 func _ready():
 	Locator.graph_edit = self

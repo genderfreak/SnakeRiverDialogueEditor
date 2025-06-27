@@ -6,7 +6,7 @@ var popup_items = [
 	["Save as template", save_as_template],
 ]
 
-var name_popup_scn = preload("res://scenes/name_popup.tscn")
+var name_popup_scn = preload("res://scenes/graphNodes/name_popup.tscn")
 
 func _ready():
 	for entry in popup_items:

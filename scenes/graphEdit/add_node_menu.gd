@@ -1,6 +1,6 @@
 extends PopupMenu
 
-@export var json_flow_node: PackedScene = preload("res://scenes/json_node.tscn")
+@export var json_flow_node: PackedScene = preload("res://scenes/graphNodes/json_node.tscn")
 @export var template_picker: PackedScene = preload("res://scenes/templateRegistry/template_picker.tscn")
 
 @onready var graph_edit = get_parent()

@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://bi4efwsssx38i"]
 
-[ext_resource type="Script" uid="uid://bhd47nkn5rmqy" path="res://scenes/menu_bar.gd" id="1_1v1ex"]
+[ext_resource type="Script" uid="uid://bhd47nkn5rmqy" path="res://scenes/editor/menu_bar.gd" id="1_1v1ex"]
 [ext_resource type="Theme" uid="uid://cdk3q0vg4tudp" path="res://themes/theme.tres" id="1_3c13b"]
-[ext_resource type="PackedScene" uid="uid://dl371oygb1ob3" path="res://scenes/right_click_menu.tscn" id="1_rxfvf"]
-[ext_resource type="Script" uid="uid://8gi8dkj8erw3" path="res://scenes/graph_edit.gd" id="1_v4xje"]
+[ext_resource type="PackedScene" uid="uid://dl371oygb1ob3" path="res://scenes/editor/right_click_menu.tscn" id="1_rxfvf"]
+[ext_resource type="Script" uid="uid://8gi8dkj8erw3" path="res://scenes/graphEdit/graph_edit.gd" id="1_v4xje"]
 [ext_resource type="PackedScene" uid="uid://c0bq3p1q5oxwj" path="res://scenes/toasts/toasts.tscn" id="2_jkc8f"]
-[ext_resource type="Script" uid="uid://c1hkif44o1rng" path="res://scenes/add_node_menu.gd" id="2_rxfvf"]
+[ext_resource type="Script" uid="uid://c1hkif44o1rng" path="res://scenes/graphEdit/add_node_menu.gd" id="2_rxfvf"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
