@@ -97,7 +97,7 @@ func load_from(dict: Dictionary) -> Array:
 	if dict.has("fields"):
 		for f in dict["fields"]:
 			var field = add_field() # keyvalue edit
-			#field.set_type(dict["fields_meta"][f])
+			field.set_type(dict["fields_meta"][f])
 			if dict["fields"][f]:
 				field.set_value(dict["fields"][f])
 			field.set_key(f)
