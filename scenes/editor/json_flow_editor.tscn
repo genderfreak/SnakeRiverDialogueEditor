@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c0bq3p1q5oxwj" path="res://scenes/toasts/toasts.tscn" id="2_jkc8f"]
 [ext_resource type="Script" uid="uid://c1hkif44o1rng" path="res://scenes/graphEdit/add_node_menu.gd" id="2_rxfvf"]
 
-[node name="Control" type="Control"]
+[node name="Editor" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,6 +36,7 @@ graph_edit = NodePath("../../GraphEdit")
 [node name="GraphEdit" type="GraphEdit" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+scroll_offset = Vector2(-1152, -648)
 grid_pattern = 1
 snapping_enabled = false
 right_disconnects = true
