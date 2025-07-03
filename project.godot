@@ -22,6 +22,10 @@ JSONFlowSettings="*res://scenes/editor/json_flow_settings.gd"
 Globals="*res://scenes/editor/globals.gd"
 Locator="*res://scenes/locator/locator.gd"
 
+[display]
+
+window/dpi/allow_hidpi=false
+
 [dotnet]
 
 project/assembly_name="Arbritrary JSON flow editor"
