@@ -12,8 +12,8 @@ var options = {
 		["Load", _load_popup],
 		["Manage templates", open_template_manager],
 	],
-	"Edit": [
-	],
+	#"Edit": [
+	#],
 	"About": [
 		["About Snake River", open_about_window],
 	]
