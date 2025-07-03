@@ -1,26 +1,29 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1beso5f3pkx6"]
 
-[ext_resource type="Script" uid="uid://w2x7om0vlkmr" path="res://scenes/outputs_editor.gd" id="1_g6cw7"]
+[ext_resource type="Script" uid="uid://w2x7om0vlkmr" path="res://scenes/graphNodes/outputs_editor.gd" id="1_g6cw7"]
 [ext_resource type="Texture2D" uid="uid://kweusrftv0r7" path="res://icons/Remove.svg" id="2_fcq68"]
 [ext_resource type="Texture2D" uid="uid://do8gwhhwilcj6" path="res://icons/Add.svg" id="3_ilmqp"]
 
 [node name="OutputsEditor" type="HBoxContainer" node_paths=PackedStringArray("minus", "plus", "label")]
-theme_override_constants/separation = 10
 script = ExtResource("1_g6cw7")
 minus = NodePath("Minus")
 plus = NodePath("Plus")
 label = NodePath("OutputsLabel")
 
-[node name="Minus" type="Button" parent="."]
-layout_mode = 2
-icon = ExtResource("2_fcq68")
-
 [node name="OutputsLabel" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Outputs"
+text = "Out"
 horizontal_alignment = 1
+
+[node name="Minus" type="Button" parent="."]
+layout_mode = 2
+text = " "
+icon = ExtResource("2_fcq68")
+icon_alignment = 1
 
 [node name="Plus" type="Button" parent="."]
 layout_mode = 2
+text = " "
 icon = ExtResource("3_ilmqp")
+icon_alignment = 1

@@ -2,7 +2,7 @@ extends HBoxContainer
 
 @export var minus: Node
 @export var plus: Node
-@export var text = "Outputs"
+@export var text = "Out"
 @export var label: Node
 
 ## Emitted when one of the buttons is pressed. If false, minus, if true, plus
