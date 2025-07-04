@@ -2,7 +2,6 @@
 ## Bugfixes
 - Done!
 ## Changes
-- Rework add node right click menu
 - Tab navigation for text fields
 - Duplicating nodes (ctrl-d + right click menu)
 - Autofocus new fields/nodes

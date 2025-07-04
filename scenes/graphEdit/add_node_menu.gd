@@ -5,25 +5,35 @@ extends PopupMenu
 
 @onready var graph_edit = get_parent()
 
+var templates_submenu = PopupMenu.new()
+
+var submenu_callables: Array[Callable] = []
+
 var popup_items = [
 	["Add JSON Flow Node", add_json_flow_node_clicked],
-	["Add node from template...", add_from_template_clicked],
 ]
 
 func _ready():
 	for entry in popup_items:
 		add_item(entry[0])
+	
+	submenu_popup_delay = 0
+	add_child(templates_submenu)
+	templates_submenu.name = "templates_submenu"
+	add_submenu_item("Add from template", "templates_submenu")
+	reload_templates()
+	about_to_popup.connect(reload_templates)
+	templates_submenu.index_pressed.connect(func (id: int):submenu_callables[id].call())
+	
 	id_pressed.connect(func (idx: int):popup_items[idx][1].call())
+
+func reload_templates():
+	templates_submenu.clear()
+	submenu_callables.clear()
+	for template in Globals.template_registry.get_templates():
+		templates_submenu.add_item(template)
+		submenu_callables.append(graph_edit.add_node.bind(
+			Globals.template_registry.get_template_data(template),template))
 
 func add_json_flow_node_clicked():
 	graph_edit.add_node()
-
-func add_from_template_clicked():
-	var picker = template_picker.instantiate()
-	add_child(picker)
-	picker.popup()
-	picker.position = get_parent().get_global_mouse_position() - Vector2(picker.size/2) + Vector2(0,100)
-	picker.template_picked.connect(template_picked)
-
-func template_picked(template):
-	graph_edit.add_node(Globals.template_registry.get_template_data(template),template)

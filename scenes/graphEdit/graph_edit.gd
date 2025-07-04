@@ -23,7 +23,7 @@ func add_node(data: Dictionary = {}, node_name: String = "", pos: Variant = fals
 
 ## Called when a child's name is changed, reconnects connections
 ## Has a bug that causes old connections to keep drawing until moved, not sure how to fix, but its not a big deal
-func __on_name_changed(instance, old_name, new_name):
+func __on_name_changed(_instance, old_name, new_name):
 	for node in get_inputting_nodes(old_name):
 		connect_json_node(node["from_node"],node["from_port"],new_name,node["to_port"])
 
