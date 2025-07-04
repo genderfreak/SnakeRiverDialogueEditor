@@ -53,6 +53,7 @@ func add_output():
 
 ## Remove an output slot
 func remove_output():
+	get_parent().disconnect_all(name,outputs.size()-1)
 	outputs.pop_back()
 	remove_child(output_labels.pop_back())
 	set_slot_enabled_right(len(output_labels),false)

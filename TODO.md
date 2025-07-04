@@ -1,6 +1,6 @@
 # TODO
 ## Bugfixes
-- Crash and visual errors when output that is connected is removed
+- Done!
 ## Changes
 - Rework add node right click menu
 - DEL to remove nodes

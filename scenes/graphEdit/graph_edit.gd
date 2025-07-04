@@ -42,10 +42,13 @@ func get_inputting_nodes(to_node: StringName):
 			array.append(node)
 	return array
 
-func _on_connection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
+func disconnect_all(from_node: StringName, from_port: int):
 	if get_connection_count(from_node, from_port):
 		for node in get_nodes_connected_to(from_node,from_port):
 			disconnect_node(from_node,from_port,node.to_node,node.to_port)
+
+func _on_connection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
+	disconnect_all(from_node, from_port)
 	connect_json_node(from_node,from_port,to_node,to_port)
 
 func _on_disconnection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
