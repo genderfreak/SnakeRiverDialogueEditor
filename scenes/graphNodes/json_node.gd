@@ -21,11 +21,12 @@ func _ready():
 	add_output()
 
 ## Add a field to the fields list, return the field
-func add_field():
+func add_field(grab_focus=true):
 	var field = JSONFlowSettings.data_field_scn.instantiate()
 	%Properties.add_child(field)
 	fields.append(field)
 	field.remove_field.connect(remove_field)
+	if grab_focus: field.key_edit.grab_focus.call_deferred()
 	return field
 
 ## Remove a field
@@ -97,7 +98,7 @@ func load_from(dict: Dictionary) -> Array:
 	position_offset.y = dict["graph_data"]["position_offset"]["y"]
 	if dict.has("fields"):
 		for f in dict["fields"]:
-			var field = add_field() # keyvalue edit
+			var field = add_field(false) # keyvalue edit
 			field.set_type(dict["fields_meta"][f])
 			if dict["fields"][f]:
 				field.set_value(dict["fields"][f])
