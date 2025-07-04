@@ -6,6 +6,7 @@ func _ready():
 	Locator.graph_edit = self
 	connection_request.connect(_on_connection_request)
 	disconnection_request.connect(_on_disconnection_request)
+	delete_nodes_request.connect(_on_delete_nodes_request)
 
 func add_node(data: Dictionary = {}, node_name: String = "", pos: Variant = false):
 	var instance = json_flow_node.instantiate()
@@ -99,7 +100,19 @@ func load_from_file(path: String):
 	else:
 		Locator.toaster.toast("Failed to load file from " + path + ", JSON Parse Error: " + json.get_error_message() + " at line " + str(json.get_error_line()), 5)
 		push_warning("JSON Parse Error: " + json.get_error_message(), " at line ", json.get_error_line())
-	
+
+func _on_delete_nodes_request(nodes: Array[StringName]):
+	var dialog = ConfirmationDialog.new()
+	dialog.dialog_text = "Delete %s nodes?" % nodes.size()
+	dialog.dialog_autowrap = true
+	add_child(dialog)
+	dialog.popup_centered()
+	dialog.canceled.connect(func (): dialog.queue_free())
+	dialog.confirmed.connect(func (): 
+		for n in nodes:
+			get_node(NodePath(n)).queue_free()
+	)
+	dialog.confirmed.connect(func (): dialog.queue_free())
 
 func clear_graph():
 	for i in get_children():
