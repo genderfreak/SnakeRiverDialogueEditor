@@ -21,12 +21,12 @@ func _ready():
 	add_output()
 
 ## Add a field to the fields list, return the field
-func add_field(grab_focus=true):
+func add_field(get_focus=true):
 	var field = JSONFlowSettings.data_field_scn.instantiate()
 	%Properties.add_child(field)
 	fields.append(field)
 	field.remove_field.connect(remove_field)
-	if grab_focus: field.key_edit.grab_focus.call_deferred()
+	if get_focus: field.key_edit.grab_focus.call_deferred()
 	return field
 
 ## Remove a field
