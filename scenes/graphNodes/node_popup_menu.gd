@@ -30,6 +30,8 @@ func change_name_popup():
 	var name_popup = name_popup_scn.instantiate()
 	add_child(name_popup)
 	name_popup.line_edit.text=get_parent().name
+	name_popup.line_edit.caret_column = name_popup.line_edit.text.length()
+	name_popup.line_edit.grab_focus.call_deferred()
 	name_popup.position=get_parent().get_global_mouse_position()-(Vector2(name_popup.size)*Vector2(0.5,0.5))
 	name_popup.confirmed.connect(change_name_popup_confirmed.bind(name_popup))
 	name_popup.canceled.connect(name_popup.queue_free)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ung0j77a3rcw"]
 
-[ext_resource type="Script" uid="uid://bjyg48y2m04tc" path="res://scenes/name_popup.gd" id="1_i08bk"]
+[ext_resource type="Script" uid="uid://bjyg48y2m04tc" path="res://scenes/graphNodes/name_popup.gd" id="1_i08bk"]
 
 [node name="NamePopup" type="ConfirmationDialog"]
 title = "Change name..."

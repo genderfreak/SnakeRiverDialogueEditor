@@ -2,9 +2,8 @@
 ## Bugfixes
 - Done!
 ## Changes
-- Tab navigation for text fields
+- Tab navigation for text fields (Wait until PR mentioned in https://github.com/godotengine/godot-proposals/issues/3050 is published)
 - F2 to rename
-- focus text on rename
 - Copy/Cut/Paste nodes
 - Duplicating nodes (ctrl-d + right click menu)
 - VariantEdit: Spellcheck + CodeEdit in text nodes
