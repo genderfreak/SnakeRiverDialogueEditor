@@ -26,6 +26,7 @@ func add_field(get_focus=true):
 	%Properties.add_child(field)
 	fields.append(field)
 	field.remove_field.connect(remove_field)
+	field.set_type(TYPE_STRING)
 	if get_focus: field.key_edit.grab_focus.call_deferred()
 	return field
 
