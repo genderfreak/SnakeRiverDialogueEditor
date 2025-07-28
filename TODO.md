@@ -2,7 +2,7 @@
 ## Bugfixes
 - Done!
 ## Changes
-- Tab navigation for text fields (Wait until PR mentioned in https://github.com/godotengine/godot-proposals/issues/3050 is published)
+- When https://github.com/godotengine/godot-proposals/issues/3050 is fixed, rebind Tab
 - F2 to rename
 - Copy/Cut/Paste nodes
 - Duplicating nodes (ctrl-d + right click menu)
