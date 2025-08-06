@@ -1,7 +1,14 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cdk3q0vg4tudp"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cdk3q0vg4tudp"]
 
-[ext_resource type="FontFile" uid="uid://6ggdgkmtxskf" path="res://themes/fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf" id="1_1h68f"]
+[ext_resource type="FontFile" uid="uid://cylunojj0cyq5" path="res://themes/fonts/Literata/Literata-VariableFont_opsz,wght.ttf" id="1_1h68f"]
+
+[sub_resource type="FontVariation" id="FontVariation_oryc4"]
+base_font = ExtResource("1_1h68f")
+variation_opentype = {
+1869640570: 18,
+2003265652: 400
+}
 
 [resource]
-default_font = ExtResource("1_1h68f")
+default_font = SubResource("FontVariation_oryc4")
 default_font_size = 18

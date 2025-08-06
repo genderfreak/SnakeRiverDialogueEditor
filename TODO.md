@@ -8,7 +8,9 @@
 - Duplicating nodes (ctrl-d + right click menu)
 - VariantEdit: Spellcheck + CodeEdit in text nodes
 - VariantEdit: dictionaries
+- Fix export/import to use "to_native" and "from_native" (perhaps optionally? may be Breaking)
 ## Systems
+- Font changing
 - Mobile support
 - Shortcuts, shortcut manager
 - Undo/redo
