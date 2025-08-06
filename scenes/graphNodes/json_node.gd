@@ -102,7 +102,10 @@ func load_from(dict: Dictionary) -> Array:
 			var field = add_field(false) # keyvalue edit
 			field.set_type(dict["fields_meta"][f])
 			if dict["fields"][f]:
-				field.set_value(dict["fields"][f])
+				## Workaround for json importing as floats
+				if dict["fields_meta"][f] == TYPE_INT:
+					field.set_value(int(dict["fields"][f]))
+				else: field.set_value(dict["fields"][f])
 			field.set_key(f)
 	return dict["outputs"] if dict.has("outputs") else []
 
