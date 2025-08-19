@@ -25,17 +25,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="MenuBar" type="MenuBar" parent="VBoxContainer/PanelContainer" node_paths=PackedStringArray("graph_edit")]
+[node name="MenuBar" type="MenuBar" parent="VBoxContainer" node_paths=PackedStringArray("graph_edit")]
 layout_mode = 2
 script = ExtResource("1_1v1ex")
-graph_edit = NodePath("../../GraphEdit")
+graph_edit = NodePath("../GraphEdit")
 
 [node name="GraphEdit" type="GraphEdit" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+scroll_offset = Vector2(0, -2)
 grid_pattern = 1
 snapping_enabled = false
 right_disconnects = true

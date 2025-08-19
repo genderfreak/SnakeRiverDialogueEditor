@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cop8fr5w0sdwi"]
+[gd_scene load_steps=9 format=3 uid="uid://cop8fr5w0sdwi"]
 
 [ext_resource type="Script" uid="uid://dflonhgcoyxvv" path="res://scenes/graphNodes/json_node.gd" id="1_36a0p"]
+[ext_resource type="Theme" uid="uid://cdk3q0vg4tudp" path="res://themes/theme.tres" id="1_hi04j"]
 [ext_resource type="Texture2D" uid="uid://do8gwhhwilcj6" path="res://icons/Add.svg" id="2_4r1s2"]
 [ext_resource type="Texture2D" uid="uid://c622bngf0xj1r" path="res://icons/DropdownMenu.svg" id="2_nlsva"]
 [ext_resource type="PackedScene" uid="uid://b1beso5f3pkx6" path="res://scenes/graphNodes/outputs_editor.tscn" id="2_qjxa0"]
@@ -9,9 +10,10 @@
 [ext_resource type="Script" uid="uid://btjmb0dk22tt3" path="res://scenes/graphNodes/node_popup_menu.gd" id="10_fhbf1"]
 
 [node name="GraphNode" type="GraphNode" node_paths=PackedStringArray("add_field_button", "output_editor")]
-offset_right = 243.0
+offset_right = 350.0
 offset_bottom = 89.0
 mouse_filter = 1
+theme = ExtResource("1_hi04j")
 resizable = true
 title = "JSON Node"
 slot/0/left_enabled = true
