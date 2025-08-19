@@ -33,7 +33,7 @@ func reload_templates():
 	for template in Globals.template_registry.get_templates():
 		templates_submenu.add_item(template)
 		submenu_callables.append(graph_edit.add_node.bind(
-			Globals.template_registry.get_template_data(template),template,graph_edit.position_in_graph(position)))
+			Globals.template_registry.get_template_data(template),template,graph_edit.make_canvas_position_local(position)))
 
 func add_json_flow_node_clicked():
-	graph_edit.add_node({},"",graph_edit.position_in_graph(position))
+	graph_edit.add_node({},"",graph_edit.make_canvas_position_local(position))
