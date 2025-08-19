@@ -19,7 +19,10 @@ func add_node(data: Dictionary = {}, node_name: String = "", pos: Variant = fals
 	if pos is Vector2:
 		instance.position_offset = (pos + scroll_offset) / zoom
 	else:
-		instance.position_offset = (get_local_mouse_position() + scroll_offset) / zoom
+		instance.position_offset = position_in_graph(get_local_mouse_position())
+
+func position_in_graph(vec2: Vector2):
+	return make_canvas_position_local((vec2 + scroll_offset) / zoom)
 
 ## Called when a child's name is changed, reconnects connections
 ## Has a bug that causes old connections to keep drawing until moved, not sure how to fix, but its not a big deal
