@@ -1,11 +1,11 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://cdk3q0vg4tudp"]
 
-[ext_resource type="FontFile" uid="uid://cylunojj0cyq5" path="res://themes/fonts/Literata/Literata-VariableFont_opsz,wght.ttf" id="1_1h68f"]
+[ext_resource type="FontFile" uid="uid://dd231fq4ci817" path="res://themes/fonts/AnonymousProMinus-1_003/Anonymous Pro Minus.ttf" id="1_1h68f"]
 
 [sub_resource type="FontVariation" id="FontVariation_oryc4"]
 base_font = ExtResource("1_1h68f")
 variation_opentype = {
-1869640570: 18,
+1869640570: 12,
 2003265652: 400
 }
 

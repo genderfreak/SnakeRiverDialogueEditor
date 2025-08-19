@@ -1,0 +1,35 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bqvfa6nhhutge"
+path="res://.godot/imported/Anonymous Pro Minus I.ttf-2ef75bc160699b8198320aa7972d865a.fontdata"
+
+[deps]
+
+source_file="res://themes/fonts/AnonymousProMinus-1_003/Anonymous Pro Minus I.ttf"
+dest_files=["res://.godot/imported/Anonymous Pro Minus I.ttf-2ef75bc160699b8198320aa7972d865a.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
