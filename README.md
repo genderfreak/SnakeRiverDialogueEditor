@@ -1,5 +1,7 @@
 # Snake River Dialogue Editor
-Snake River Dialogue Editor is a nodegraph tool for editing dialogue.
+Snake River Dialogue Editor is a nodegraph tool useful for creating branching dialogue for games.
+
+![Screenshot of editor UI](/screenshots/ui.png)
 
 ## Features
 
@@ -7,8 +9,15 @@ Nodes are composed of sets of fields. These fields can be any data type which is
 
 Node's field composition can be saved as a 'template' to be reused.
 
+![Screenshot of editor UI](/screenshots/templates1.png)
+![Screenshot of editor UI](/screenshots/templates_about.png)
+
 Dialogue files are saved as readable JSON. They can, naturally, be used in any engine. For an example written in Godot, see [this repository.](https://github.com/genderfreak/snake-river-dialogue-parser-example)
 
-Since you are writing the parser, integrating Lua scripting is possible by having a 'Lua' field in your node.
+Since you are writing the parser, integrating Lua scripting is possible by having a 'Lua' field in your node. (For my game, I've implemented character speech tags, Lua scripting, dice rolls, oneshot choices/text, and gotos)
 
-This app should be used with caution and careful version control. Many quality of life features such as autosaving, save precautions, and certain features are still buggy. You should save often. Report bugs to the issue tracker so I can triage them and make the app better.
+![Screenshot of editor UI](/screenshots/ui_zoomout.png)
+
+## Disclaimer
+
+This app should be used with caution and careful version control. Many quality of life features such as autosaving, save precautions, and certain features are still buggy. You should save often. Report bugs to the issue tracker so I can improve the tool. This app is in alpha, and should be treated as such.
