@@ -18,4 +18,6 @@ Since you are writing the parser, integrating Lua scripting is possible by havin
 
 ![Screenshot of editor UI](/screenshots/ui_zoomout.png)
 
-This app should be used with caution and careful version control. Many quality of life features such as autosaving, save precautions, and certain features are still buggy. You should save often. Report bugs to the issue tracker so I can triage them and make the app better.
+## Disclaimer
+
+This app should be used with caution and careful version control. Many quality of life features such as autosaving, save precautions, and certain features are still buggy. You should save often. Report bugs to the issue tracker so I can improve the tool. This app is in alpha, and should be treated as such.
