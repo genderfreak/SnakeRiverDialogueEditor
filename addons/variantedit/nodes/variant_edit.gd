@@ -30,8 +30,8 @@ func get_value():
 func update_value():
 	__value = edit_node.get_value()
 
-func set_value(new_value):
-	change_type(typeof(new_value))
+func set_value(new_value, do_change_type=true):
+	if do_change_type: change_type(typeof(new_value))
 	__value=new_value
 	edit_node.set_value(__value)
 

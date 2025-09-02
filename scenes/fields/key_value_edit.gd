@@ -51,7 +51,7 @@ func set_key(key: String):
 
 ## Set the value of the field
 func set_value(value: Variant):
-	var_edit.set_value(value)
+	var_edit.set_value(value, false)
 
 ## Send a signal requesting deletion
 func delete_self():

@@ -1,0 +1,37 @@
+{
+  "GraphNode": {
+    "fields": {
+      "array": [
+        true,
+        "str",
+        "str name"
+      ],
+      "boolean": true,
+      "float": 4.5,
+      "int": 105,
+      "null": null,
+      "string": "some string",
+      "stringname": "some name"
+    },
+    "fields_meta": {
+      "array": 28,
+      "boolean": 1,
+      "float": 3,
+      "int": 2,
+      "null": 0,
+      "string": 4,
+      "stringname": 21
+    },
+    "graph_data": {
+      "position_offset": {
+        "x": 385.974151611328,
+        "y": 35.0483131408691
+      },
+      "size": {
+        "x": 350.0,
+        "y": 857.0
+      }
+    },
+    "outputs": []
+  }
+}

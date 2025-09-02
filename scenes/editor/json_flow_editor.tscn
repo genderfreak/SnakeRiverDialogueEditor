@@ -33,7 +33,6 @@ graph_edit = NodePath("../GraphEdit")
 [node name="GraphEdit" type="GraphEdit" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-scroll_offset = Vector2(0, -2)
 grid_pattern = 1
 snapping_enabled = false
 right_disconnects = true
